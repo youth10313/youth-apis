@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc && cp -r ./src/@types ./dist/"
   },
-  "repository": "",
+  "repository": "https://github.com/youth10313/youth-apis",
   "keywords": [
     "ahmed",
     "alhasan",
