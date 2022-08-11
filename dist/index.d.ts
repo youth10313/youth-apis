@@ -2310,7 +2310,7 @@ declare const YouthServers: {
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
             };
-            AddLocale: (app: string, locale: string) => {
+            AddLocale: (app: string, locale: string, Authorization?: string) => {
                 onComelete: (func: (data: {
                     msg: "DONE";
                 }) => any) => any;
@@ -2324,7 +2324,7 @@ declare const YouthServers: {
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
             };
-            RemoveLocale: (app: string, locale: string) => {
+            RemoveLocale: (app: string, locale: string, Authorization?: string) => {
                 onComelete: (func: (data: {
                     msg: "DONE";
                 }) => any) => any;
