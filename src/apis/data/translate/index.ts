@@ -8,8 +8,8 @@ const Locale = (app: string, locale: string) => YouthRoute<I18nFull>('get', `${D
 const Module = (app: string, locale: string, module: string) => YouthRoute<I18nFull>('get', `${DATA_API}translations/${app}/${locale}/${module}`, {}, {}, {});
 
 const AppLocales = (app: string) => YouthRoute<string[]>('get', `${DATA_API}localizations/${app}`, {}, {}, {});
-const AddLocale = (app: string, locale: string) => YouthRoute<{ msg: "DONE" }>('post', `${DATA_API}localizations/${app}/${locale}`, {}, {}, {});
-const RemoveLocale = (app: string, locale: string) => YouthRoute<{ msg: "DONE" }>('delete', `${DATA_API}localizations/${app}/${locale}`, {}, {}, {});
+const AddLocale = (app: string, locale: string, Authorization = '') => YouthRoute<{ msg: "DONE" }>('post', `${DATA_API}localizations/${app}/${locale}`, {}, { Authorization }, {});
+const RemoveLocale = (app: string, locale: string, Authorization = '') => YouthRoute<{ msg: "DONE" }>('delete', `${DATA_API}localizations/${app}/${locale}`, {}, { Authorization }, {});
 
 
 const Translations = {
