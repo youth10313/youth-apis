@@ -9,6 +9,7 @@ export class EntityRequest<A = any, B = any, C = A[]> {
         const remove = (id: string, locale: string, Authorization = '') => YouthRoute<{ msg: "DELETED" }>('delete', `${this.url}/${id}`, {}, { Authorization, locale }, {});
         const fetch = (
             locale: string,
+            querystring: string = '',
             Authorization = '',
             page?: number,
             perPage?: number,
@@ -26,9 +27,9 @@ export class EntityRequest<A = any, B = any, C = A[]> {
                 date_end = date_end.toISOString() as any;
             }
             if (category && category instanceof Array) {
-                category = '?category=' + category.reduce((t, c) => t + '&category=' + c)
+                category = 'category=' + category.reduce((t, c) => t + '&category=' + c)
             }
-            return YouthRoute<C>('get', `${this.url}${category || ''}`, { page, perPage, search, sort_by, sort_order, locale }, { Authorization, locale }, {});
+            return YouthRoute<C>('get', `${this.url}?${querystring}${category || ''}`, { page, perPage, search, sort_by, sort_order, locale }, { Authorization, locale }, {});
         }
         const fetchOne = (latinTitle_or_id: string, locale: string, Authorization = '') => YouthRoute<A>('get', `${this.url}/${latinTitle_or_id}`, { locale }, { locale, Authorization }, {});
         const trash = (locale: string, Authorization = '') => YouthRoute<A>('get', `${this.url}/trash`, { locale }, { Authorization, locale }, {});
