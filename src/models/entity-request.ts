@@ -29,7 +29,7 @@ export class EntityRequest<A = any, B = any, C = A[]> {
             if (category && category instanceof Array) {
                 category = 'category=' + category.reduce((t, c) => t + '&category=' + c)
             }
-            return YouthRoute<C>('get', `${this.url}?${category || ''}`, { page, perPage, search, sort_by, sort_order, locale, ...querystring }, { Authorization, locale }, {});
+            return YouthRoute<C>('get', `${this.url}?${category || ''}`, { page, perPage, search, sort_by, sort_order, locale, date_start, date_end, ...querystring }, { Authorization, locale }, {});
         }
         const fetchOne = (latinTitle_or_id: string, locale: string, Authorization = '') => YouthRoute<A>('get', `${this.url}/${latinTitle_or_id}`, { locale }, { locale, Authorization }, {});
         const trash = (locale: string, Authorization = '') => YouthRoute<A>('get', `${this.url}/trash`, { locale }, { Authorization, locale }, {});

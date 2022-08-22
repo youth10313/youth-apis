@@ -43,7 +43,7 @@ var EntityRequest = /** @class */ (function () {
             if (category && category instanceof Array) {
                 category = 'category=' + category.reduce(function (t, c) { return t + '&category=' + c; });
             }
-            return (0, request_1.YouthRoute)('get', "".concat(_this.url, "?").concat(category || ''), __assign({ page: page, perPage: perPage, search: search, sort_by: sort_by, sort_order: sort_order, locale: locale }, querystring), { Authorization: Authorization, locale: locale }, {});
+            return (0, request_1.YouthRoute)('get', "".concat(_this.url, "?").concat(category || ''), __assign({ page: page, perPage: perPage, search: search, sort_by: sort_by, sort_order: sort_order, locale: locale, date_start: date_start, date_end: date_end }, querystring), { Authorization: Authorization, locale: locale }, {});
         };
         var fetchOne = function (latinTitle_or_id, locale, Authorization) {
             if (Authorization === void 0) { Authorization = ''; }
