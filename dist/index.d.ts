@@ -482,7 +482,7 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
@@ -596,7 +596,7 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
@@ -710,7 +710,7 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/pray").Pray>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
@@ -825,7 +825,7 @@ declare const YouthServers: {
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
                         };
-                        fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                        fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                             onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/doubt").Doubt>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
@@ -939,7 +939,7 @@ declare const YouthServers: {
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
                         };
-                        fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                        fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                             onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/question").Question>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
@@ -1055,7 +1055,7 @@ declare const YouthServers: {
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
                         };
-                        fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                        fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                             onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
@@ -1169,7 +1169,7 @@ declare const YouthServers: {
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
                         };
-                        fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                        fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                             onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
@@ -1283,7 +1283,7 @@ declare const YouthServers: {
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
                         };
-                        fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                        fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                             onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
@@ -1397,7 +1397,7 @@ declare const YouthServers: {
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
                         };
-                        fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                        fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                             onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
@@ -1512,7 +1512,7 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/book").Book>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
@@ -1626,7 +1626,7 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/sermon").Sermon[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
@@ -1682,7 +1682,7 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/meeting").Meeting[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
@@ -1738,7 +1738,7 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/statement").Statement[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
@@ -1794,7 +1794,7 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/ansar").Ansar[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
@@ -1850,7 +1850,7 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/history").History[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
@@ -1908,7 +1908,7 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/track").Track>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
@@ -1964,7 +1964,7 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/podcast").Podcast>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
@@ -2022,8 +2022,8 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/reason").Reason>) => any) => any;
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                        onComelete: (func: (data: import("./@types/reason").Reason) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
@@ -2078,8 +2078,8 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/religion").Religion>) => any) => any;
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                        onComelete: (func: (data: import("./@types/religion").Religion) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
@@ -2136,7 +2136,7 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/class").Class>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
@@ -2192,7 +2192,7 @@ declare const YouthServers: {
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
                     };
-                    fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/lesson").Lesson>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;

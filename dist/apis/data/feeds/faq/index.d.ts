@@ -10,7 +10,7 @@ declare const FAQ: {
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
             };
-            fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+            fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                 onComelete: (func: (data: Pagination<Doubt>) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
@@ -124,7 +124,7 @@ declare const FAQ: {
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
             };
-            fetch: (locale: string, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+            fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                 onComelete: (func: (data: Pagination<Question>) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;

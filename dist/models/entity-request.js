@@ -1,4 +1,15 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.EntityRequest = void 0;
 var request_1 = require("./request");
@@ -20,7 +31,8 @@ var EntityRequest = /** @class */ (function () {
             if (Authorization === void 0) { Authorization = ''; }
             return (0, request_1.YouthRoute)('delete', "".concat(_this.url, "/").concat(id), {}, { Authorization: Authorization, locale: locale }, {});
         };
-        var fetch = function (locale, Authorization, page, perPage, search, sort_by, sort_order, date_start, date_end, category) {
+        var fetch = function (locale, querystring, Authorization, page, perPage, search, sort_by, sort_order, date_start, date_end, category) {
+            if (querystring === void 0) { querystring = {}; }
             if (Authorization === void 0) { Authorization = ''; }
             if (date_start) {
                 date_start = date_start.toISOString();
@@ -29,9 +41,9 @@ var EntityRequest = /** @class */ (function () {
                 date_end = date_end.toISOString();
             }
             if (category && category instanceof Array) {
-                category = '?category=' + category.reduce(function (t, c) { return t + '&category=' + c; });
+                category = 'category=' + category.reduce(function (t, c) { return t + '&category=' + c; });
             }
-            return (0, request_1.YouthRoute)('get', "".concat(_this.url).concat(category || ''), { page: page, perPage: perPage, search: search, sort_by: sort_by, sort_order: sort_order, locale: locale }, { Authorization: Authorization, locale: locale }, {});
+            return (0, request_1.YouthRoute)('get', "".concat(_this.url, "?").concat(category || ''), __assign({ page: page, perPage: perPage, search: search, sort_by: sort_by, sort_order: sort_order, locale: locale }, querystring), { Authorization: Authorization, locale: locale }, {});
         };
         var fetchOne = function (latinTitle_or_id, locale, Authorization) {
             if (Authorization === void 0) { Authorization = ''; }

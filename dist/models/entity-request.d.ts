@@ -9,7 +9,7 @@ export declare class EntityRequest<A = any, B = any, C = A[]> {
             onChange: (func: (state: boolean) => any) => any;
             subscribe: () => void;
         };
-        fetch: (locale: string, Authorization?: string, page?: number, perPage?: number, search?: string, sort_by?: string, sort_order?: 'ASC' | 'DESC', date_start?: Date, date_end?: Date, category?: string | string[]) => {
+        fetch: (locale: string, querystring?: any, Authorization?: string, page?: number, perPage?: number, search?: string, sort_by?: string, sort_order?: 'ASC' | 'DESC', date_start?: Date, date_end?: Date, category?: string | string[]) => {
             onComelete: (func: (data: C) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
