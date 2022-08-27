@@ -1,6 +1,6 @@
 {
   "name": "@youth10313/youth-apis",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "ahmed alhasan's youth APIs we've created simple package for you to use our APIs in your projects easily. but we prefer you to read our [API Documention](https://developers.ahmedalhasan.com/). also do not to check [Youth Club](https://ahmedalhasan.club)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
