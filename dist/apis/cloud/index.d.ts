@@ -8,6 +8,7 @@ declare const Cloud: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     Upload: (body: any, path?: string, token?: string) => {
         onComelete: (func: (data: {
@@ -16,6 +17,7 @@ declare const Cloud: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     Unlink: (path?: string, token?: string) => {
         onComelete: (func: (data: {
@@ -24,6 +26,7 @@ declare const Cloud: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
 };
 export default Cloud;

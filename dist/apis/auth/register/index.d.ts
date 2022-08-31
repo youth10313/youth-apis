@@ -9,6 +9,7 @@ declare const Register: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     SendForm: (body: {
         username: string;
@@ -22,6 +23,7 @@ declare const Register: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
 };
 export default Register;

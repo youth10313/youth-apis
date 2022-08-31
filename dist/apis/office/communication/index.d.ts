@@ -12,6 +12,7 @@ declare const Communication: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     Remove: (id: string, token?: string) => {
         onComelete: (func: (data: {
@@ -20,18 +21,21 @@ declare const Communication: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     Mails: (box: 'inbox' | 'outbox', token?: string) => {
         onComelete: (func: (data: Pagination<Letter>) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     Mail: (id: string, box: 'inbox' | 'outbox', token?: string) => {
         onComelete: (func: (data: Letter) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
 };
 export default Communication;

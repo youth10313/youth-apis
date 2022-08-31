@@ -12,6 +12,7 @@ declare const Complaints: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     Remove: (id: string, token?: string) => {
         onComelete: (func: (data: {
@@ -20,30 +21,35 @@ declare const Complaints: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     GetDepartmentComplaint: (id: string, token?: string) => {
         onComelete: (func: (data: Complaint) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     GetUserComplaint: (id: string, Authorization?: string) => {
         onComelete: (func: (data: Complaint) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     GetDepartmentComplaints: (keyword?: string, token?: string) => {
         onComelete: (func: (data: Complaint) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     GetUserComplaints: (keyword?: string, Authorization?: string) => {
         onComelete: (func: (data: Complaint) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
 };
 export default Complaints;

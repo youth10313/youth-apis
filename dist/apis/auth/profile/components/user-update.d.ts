@@ -19,6 +19,7 @@ declare const _default: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     UpdatePassword: (body: {
         password: string;
@@ -30,6 +31,7 @@ declare const _default: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
 };
 export default _default;

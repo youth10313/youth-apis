@@ -7,24 +7,28 @@ declare const Translations: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     App: (app: string) => {
         onComelete: (func: (data: I18nFull) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     Locale: (app: string, locale: string) => {
         onComelete: (func: (data: I18nFull) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     Module: (app: string, locale: string, module: string) => {
         onComelete: (func: (data: I18nFull) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     AddLocale: (app: string, locale: string, Authorization?: string) => {
         onComelete: (func: (data: {
@@ -33,12 +37,14 @@ declare const Translations: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     AppLocales: (app: string) => {
         onComelete: (func: (data: string[]) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     RemoveLocale: (app: string, locale: string, Authorization?: string) => {
         onComelete: (func: (data: {
@@ -47,6 +53,7 @@ declare const Translations: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
 };
 export default Translations;

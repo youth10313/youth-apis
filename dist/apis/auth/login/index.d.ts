@@ -11,6 +11,7 @@ declare const Login: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     LoginUserStepTwo: (body: {
         email: string;
@@ -26,6 +27,7 @@ declare const Login: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     RenewUserToken: (_private?: string) => {
         onComelete: (func: (data: {
@@ -36,6 +38,7 @@ declare const Login: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     LoginOfficial: (body: {
         phrase: string;
@@ -49,6 +52,7 @@ declare const Login: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     GetSessions: (Authorization?: string) => {
         onComelete: (func: (data: {
@@ -79,6 +83,7 @@ declare const Login: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     ResetPassword: {
         StepOne: (body: {
@@ -91,6 +96,7 @@ declare const Login: {
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
             subscribe: () => void;
+            abort: () => void;
         };
         StepTwo: (body: {
             email: string;
@@ -103,6 +109,7 @@ declare const Login: {
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
             subscribe: () => void;
+            abort: () => void;
         };
     };
     LogoutOffice: (token?: string) => {
@@ -112,6 +119,7 @@ declare const Login: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     LogoutUser: (_private?: string) => {
         onComelete: (func: (data: {
@@ -120,6 +128,7 @@ declare const Login: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
 };
 export default Login;

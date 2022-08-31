@@ -22,6 +22,7 @@ declare const Users: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     UpdateUser: (id: string, body: {
         username?: string | undefined;
@@ -46,6 +47,7 @@ declare const Users: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     DeleteUser: (id: string, Authorization?: string) => {
         onComelete: (func: (data: {
@@ -54,18 +56,21 @@ declare const Users: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     GetUsers: (page: number, keyword: string, Authorization?: string) => {
         onComelete: (func: (data: import("../../../@types/common").Pagination<import("../../../@types/user").User>) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     GetUser: (id: string, Authorization?: string) => {
         onComelete: (func: (data: import("../../../@types/user").User) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
 };
 export default Users;

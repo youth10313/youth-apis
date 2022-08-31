@@ -11,6 +11,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             LoginUserStepTwo: (body: {
                 email: string;
@@ -26,6 +27,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             RenewUserToken: (_private?: string) => {
                 onComelete: (func: (data: {
@@ -36,6 +38,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             LoginOfficial: (body: {
                 phrase: string;
@@ -49,6 +52,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetSessions: (Authorization?: string) => {
                 onComelete: (func: (data: {
@@ -79,6 +83,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             ResetPassword: {
                 StepOne: (body: {
@@ -91,6 +96,7 @@ declare const YouthServers: {
                     onError: (func: (err: any) => any) => any;
                     onChange: (func: (state: boolean) => any) => any;
                     subscribe: () => void;
+                    abort: () => void;
                 };
                 StepTwo: (body: {
                     email: string;
@@ -103,6 +109,7 @@ declare const YouthServers: {
                     onError: (func: (err: any) => any) => any;
                     onChange: (func: (state: boolean) => any) => any;
                     subscribe: () => void;
+                    abort: () => void;
                 };
             };
             LogoutOffice: (token?: string) => {
@@ -112,6 +119,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             LogoutUser: (_private?: string) => {
                 onComelete: (func: (data: {
@@ -120,6 +128,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
         Register: {
@@ -133,6 +142,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             SendForm: (body: {
                 username: string;
@@ -146,6 +156,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
         Profile: {
@@ -154,6 +165,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             User: {
                 UpdateProfile: (body: {
@@ -176,6 +188,7 @@ declare const YouthServers: {
                     onError: (func: (err: any) => any) => any;
                     onChange: (func: (state: boolean) => any) => any;
                     subscribe: () => void;
+                    abort: () => void;
                 };
                 UpdatePassword: (body: {
                     password: string;
@@ -187,6 +200,7 @@ declare const YouthServers: {
                     onError: (func: (err: any) => any) => any;
                     onChange: (func: (state: boolean) => any) => any;
                     subscribe: () => void;
+                    abort: () => void;
                 };
             };
             Department: {
@@ -200,6 +214,7 @@ declare const YouthServers: {
                     onError: (func: (err: any) => any) => any;
                     onChange: (func: (state: boolean) => any) => any;
                     subscribe: () => void;
+                    abort: () => void;
                 };
                 UpdateProfile: (body: {
                     title?: string | undefined;
@@ -213,6 +228,7 @@ declare const YouthServers: {
                     onError: (func: (err: any) => any) => any;
                     onChange: (func: (state: boolean) => any) => any;
                     subscribe: () => void;
+                    abort: () => void;
                 };
             };
         };
@@ -240,6 +256,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             UpdateUser: (id: string, body: {
                 username?: string | undefined;
@@ -264,6 +281,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             DeleteUser: (id: string, Authorization?: string) => {
                 onComelete: (func: (data: {
@@ -272,18 +290,21 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetUsers: (page: number, keyword: string, Authorization?: string) => {
                 onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/user").User>) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetUser: (id: string, Authorization?: string) => {
                 onComelete: (func: (data: import("./@types/user").User) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
         Departments: {
@@ -305,6 +326,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             UpdateDepartment: (id: string, body: {
                 title?: string | undefined;
@@ -321,6 +343,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             DeleteDepartment: (id: string, token?: string) => {
                 onComelete: (func: (data: {
@@ -329,18 +352,21 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetDepartmentLevels: (direction: "up" | "down", departmentId: string) => {
                 onComelete: (func: (data: import("./@types/official").Official[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetDepartments: (owners?: "" | "true", token?: string) => {
                 onComelete: (func: (data: import("./@types/official").Official[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
         Employees: {
@@ -360,6 +386,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             UpdateEmployee: (id: string, body: {
                 title?: string | undefined;
@@ -376,6 +403,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             DeleteEmployee: (id: string, token?: string) => {
                 onComelete: (func: (data: {
@@ -384,12 +412,14 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetEmployees: (token?: string) => {
                 onComelete: (func: (data: import("./@types/official").Employee[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
     };
@@ -403,6 +433,7 @@ declare const YouthServers: {
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
             subscribe: () => void;
+            abort: () => void;
         };
         Upload: (body: any, path?: string, token?: string) => {
             onComelete: (func: (data: {
@@ -411,6 +442,7 @@ declare const YouthServers: {
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
             subscribe: () => void;
+            abort: () => void;
         };
         Unlink: (path?: string, token?: string) => {
             onComelete: (func: (data: {
@@ -419,6 +451,7 @@ declare const YouthServers: {
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
             subscribe: () => void;
+            abort: () => void;
         };
     };
     Data: {
@@ -428,36 +461,42 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             create: (name: string, locale: string, Authorization?: string) => {
                 onComelete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             update: (id: string, name: string, locale: string, Authorization?: string) => {
                 onComelete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             remove: (id: string, Authorization?: string) => {
                 onComelete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             train: (id: string, namespace: string, questions: string[], answers: string[], locale: string, Authorization?: string) => {
                 onComelete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             ask: (id: string, q: string, locale: string, Authorization?: string) => {
                 onComelete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
         Core: (q: string, locale: string) => {
@@ -472,6 +511,7 @@ declare const YouthServers: {
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
             subscribe: () => void;
+            abort: () => void;
         };
         Feeds: {
             Bigbang: {
@@ -481,12 +521,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/post").Post, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -495,6 +537,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: import("./@types/post").Post, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -503,6 +546,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -511,24 +555,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
                 categories: {
@@ -537,12 +585,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -551,6 +601,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -559,6 +610,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -567,24 +619,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
             };
@@ -595,12 +651,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/post").Post, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -609,6 +667,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: import("./@types/post").Post, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -617,6 +676,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -625,24 +685,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
                 categories: {
@@ -651,12 +715,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -665,6 +731,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -673,6 +740,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -681,24 +749,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
             };
@@ -709,12 +781,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/pray").Pray>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/pray").Pray, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -723,6 +797,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -731,6 +806,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -739,24 +815,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
                 categories: {
@@ -765,12 +845,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -779,6 +861,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -787,6 +870,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -795,24 +879,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
             };
@@ -824,12 +912,14 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                             onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/doubt").Doubt>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         create: (body: import("./@types/doubt").Doubt, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -838,6 +928,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         update: (id: string, body: any, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -846,6 +937,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -854,24 +946,28 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                     };
                     categories: {
@@ -880,12 +976,14 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         fetch: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -894,6 +992,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -902,6 +1001,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -910,24 +1010,28 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                     };
                 };
@@ -938,12 +1042,14 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                             onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/question").Question>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         create: (body: import("./@types/question").Question, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -952,6 +1058,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         update: (id: string, body: any, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -960,6 +1067,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -968,24 +1076,28 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                     };
                     categories: {
@@ -994,12 +1106,14 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         fetch: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1008,6 +1122,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1016,6 +1131,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1024,24 +1140,28 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                     };
                 };
@@ -1054,12 +1174,14 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                             onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         create: (body: import("./@types/post").Post, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1068,6 +1190,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         update: (id: string, body: any, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1076,6 +1199,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1084,24 +1208,28 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                     };
                     categories: {
@@ -1110,12 +1238,14 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         fetch: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1124,6 +1254,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1132,6 +1263,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1140,24 +1272,28 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                     };
                 };
@@ -1168,12 +1304,14 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                             onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         create: (body: import("./@types/post").Post, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1182,6 +1320,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         update: (id: string, body: any, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1190,6 +1329,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1198,24 +1338,28 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                     };
                     categories: {
@@ -1224,12 +1368,14 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         fetch: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1238,6 +1384,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1246,6 +1393,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1254,24 +1402,28 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                     };
                 };
@@ -1282,12 +1434,14 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                             onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         create: (body: import("./@types/post").Post, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1296,6 +1450,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         update: (id: string, body: any, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1304,6 +1459,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1312,24 +1468,28 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                     };
                     categories: {
@@ -1338,12 +1498,14 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         fetch: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1352,6 +1514,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1360,6 +1523,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1368,24 +1532,28 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                     };
                 };
@@ -1396,12 +1564,14 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                             onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         create: (body: import("./@types/post").Post, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1410,6 +1580,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         update: (id: string, body: any, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1418,6 +1589,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1426,24 +1598,28 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                     };
                     categories: {
@@ -1452,12 +1628,14 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         fetch: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1466,6 +1644,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1474,6 +1653,7 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: {
@@ -1482,24 +1662,28 @@ declare const YouthServers: {
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
                             onComelete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
                             subscribe: () => void;
+                            abort: () => void;
                         };
                     };
                 };
@@ -1511,12 +1695,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/book").Book>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/book").Book, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1525,6 +1711,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1533,6 +1720,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1541,24 +1729,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
                 categories: {
@@ -1567,12 +1759,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1581,6 +1775,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1589,6 +1784,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1597,24 +1793,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
             };
@@ -1625,12 +1825,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/sermon").Sermon[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/sermon").Sermon, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1639,6 +1841,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1647,6 +1850,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1655,24 +1859,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/sermon").Sermon) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/sermon").Sermon) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/sermon").Sermon) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
                 Meetings: {
@@ -1681,12 +1889,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/meeting").Meeting[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/meeting").Meeting, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1695,6 +1905,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1703,6 +1914,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1711,24 +1923,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/meeting").Meeting) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/meeting").Meeting) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/meeting").Meeting) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
                 Statements: {
@@ -1737,12 +1953,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/statement").Statement[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/statement").Statement, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1751,6 +1969,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1759,6 +1978,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1767,24 +1987,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/statement").Statement) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/statement").Statement) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/statement").Statement) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
                 Ansars: {
@@ -1793,12 +2017,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/ansar").Ansar[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/ansar").Ansar, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1807,6 +2033,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1815,6 +2042,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1823,24 +2051,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/ansar").Ansar) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/ansar").Ansar) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/ansar").Ansar) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
                 Histories: {
@@ -1849,12 +2081,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/history").History[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/history").History, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1863,6 +2097,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1871,6 +2106,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1879,24 +2115,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/history").History) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/history").History) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/history").History) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
             };
@@ -1907,12 +2147,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/track").Track>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/track").Track, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1921,6 +2163,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1929,6 +2172,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1937,24 +2181,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/track").Track) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/track").Track) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/track").Track) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
                 Podcasts: {
@@ -1963,12 +2211,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/podcast").Podcast>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/podcast").Podcast, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1977,6 +2227,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1985,6 +2236,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -1993,24 +2245,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/podcast").Podcast) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/podcast").Podcast) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/podcast").Podcast) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
             };
@@ -2021,12 +2277,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/reason").Reason) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/reason").Reason, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2035,6 +2293,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2043,6 +2302,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2051,24 +2311,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/reason").Reason) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/reason").Reason) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/reason").Reason) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
                 Religions: {
@@ -2077,12 +2341,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/religion").Religion) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/religion").Religion, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2091,6 +2357,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2099,6 +2366,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2107,24 +2375,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/religion").Religion) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/religion").Religion) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/religion").Religion) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
             };
@@ -2135,12 +2407,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/class").Class>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/class").Class, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2149,6 +2423,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2157,6 +2432,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2165,24 +2441,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/class").Class) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/class").Class) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/class").Class) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
                 Lessons: {
@@ -2191,12 +2471,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/lesson").Lesson>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/lesson").Lesson, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2205,6 +2487,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2213,6 +2496,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2221,24 +2505,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/lesson").Lesson) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/lesson").Lesson) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/lesson").Lesson) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
                 Teachers: {
@@ -2247,12 +2535,14 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
                         onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/teacher").Teacher>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     create: (body: import("./@types/teacher").Teacher, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2261,6 +2551,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2269,6 +2560,7 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: {
@@ -2277,24 +2569,28 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/teacher").Teacher) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/teacher").Teacher) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
                         onComelete: (func: (data: import("./@types/teacher").Teacher) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
                 Chapters: {
@@ -2303,18 +2599,21 @@ declare const YouthServers: {
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     Pass: (lessonId: string, Authorization?: string) => {
                         onComelete: (func: (data: unknown) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                     UnPass: (lessonId: string, Authorization?: string) => {
                         onComelete: (func: (data: unknown) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         subscribe: () => void;
+                        abort: () => void;
                     };
                 };
             };
@@ -2325,18 +2624,21 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             AdjustFont: (app: string, url: string, locale: string, Authorization?: string) => {
                 onComelete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             Refresh: (app: string, locale: string, Authorization?: string) => {
                 onComelete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
         Translations: {
@@ -2347,24 +2649,28 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             App: (app: string) => {
                 onComelete: (func: (data: import("./@types/common").I18nFull) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             Locale: (app: string, locale: string) => {
                 onComelete: (func: (data: import("./@types/common").I18nFull) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             Module: (app: string, locale: string, module: string) => {
                 onComelete: (func: (data: import("./@types/common").I18nFull) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             AddLocale: (app: string, locale: string, Authorization?: string) => {
                 onComelete: (func: (data: {
@@ -2373,12 +2679,14 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             AppLocales: (app: string) => {
                 onComelete: (func: (data: string[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             RemoveLocale: (app: string, locale: string, Authorization?: string) => {
                 onComelete: (func: (data: {
@@ -2387,6 +2695,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
     };
@@ -2399,6 +2708,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             UpdateUserAd: (body: any, Authorization?: string) => {
                 onComelete: (func: (data: {
@@ -2407,6 +2717,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             SignAds: (token?: string) => {
                 onComelete: (func: (data: {
@@ -2415,6 +2726,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             RemoveAd: (id: string, token?: string, Authorization?: string) => {
                 onComelete: (func: (data: {
@@ -2423,18 +2735,21 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetDepartmentAds: (from: Date | undefined, to: Date | undefined, signed: boolean, count: boolean, token?: string) => {
                 onComelete: (func: (data: import("./@types/ads").Ad[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetUserAds: (from: Date | undefined, to: Date | undefined, signed: boolean, count: boolean, Authorization?: string) => {
                 onComelete: (func: (data: import("./@types/ads").Ad[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
         Blazer: {
@@ -2445,18 +2760,21 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             Cancel: (id: string, token?: string) => {
                 onComelete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             History: (token?: string) => {
                 onComelete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
         Citizens: {
@@ -2468,6 +2786,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             DeleteLink: (token?: string) => {
                 onComelete: (func: (data: {
@@ -2476,42 +2795,49 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             Join: (linkHash: string, Authorization?: string) => {
                 onComelete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             Left: (id: string, Authorization?: string) => {
                 onComelete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             ApproveCitizen: (userId: string, token?: string) => {
                 onComelete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             KickCitizen: (userId: string, token?: string) => {
                 onComelete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetUserDepartments: (Authorization?: string) => {
                 onComelete: (func: (data: import("./@types/citizen").Citizen[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetDepartmentCitizens: (type: "" | "all" | "lobby", token?: string) => {
                 onComelete: (func: (data: import("./@types/citizen").Citizen[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
         Communication: {
@@ -2526,6 +2852,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             Remove: (id: string, token?: string) => {
                 onComelete: (func: (data: {
@@ -2534,18 +2861,21 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             Mails: (box: "inbox" | "outbox", token?: string) => {
                 onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/letter").Letter>) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             Mail: (id: string, box: "inbox" | "outbox", token?: string) => {
                 onComelete: (func: (data: import("./@types/letter").Letter) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
         Complaints: {
@@ -2561,6 +2891,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             Remove: (id: string, token?: string) => {
                 onComelete: (func: (data: {
@@ -2569,30 +2900,35 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetDepartmentComplaint: (id: string, token?: string) => {
                 onComelete: (func: (data: import("./@types/complaint").Complaint) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetUserComplaint: (id: string, Authorization?: string) => {
                 onComelete: (func: (data: import("./@types/complaint").Complaint) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetDepartmentComplaints: (keyword?: string, token?: string) => {
                 onComelete: (func: (data: import("./@types/complaint").Complaint) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetUserComplaints: (keyword?: string, Authorization?: string) => {
                 onComelete: (func: (data: import("./@types/complaint").Complaint) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
         Reports: {
@@ -2609,6 +2945,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             UpdateProject: (id: string, body: {
                 title: string;
@@ -2623,6 +2960,7 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             RemoveProject: (id: string, token?: string) => {
                 onComelete: (func: (data: {
@@ -2631,18 +2969,21 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetProjects: (token?: string) => {
                 onComelete: (func: (data: import("./@types/report").ReportProject[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetUserProjects: (Authorization?: string) => {
                 onComelete: (func: (data: import("./@types/report").ReportProject[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             SendUserReport: (projectId: string, id: string, answers?: string[] | undefined, Authorization?: string) => {
                 onComelete: (func: (data: {
@@ -2651,18 +2992,21 @@ declare const YouthServers: {
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetProjectReports: (id: string, token?: string) => {
                 onComelete: (func: (data: import("./@types/report").Report[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
             GetUserProjectReports: (id: string, Authorization?: string) => {
                 onComelete: (func: (data: import("./@types/report").Report[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 subscribe: () => void;
+                abort: () => void;
             };
         };
     };

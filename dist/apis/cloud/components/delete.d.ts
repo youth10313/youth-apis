@@ -5,5 +5,6 @@ declare const Unlink: (path?: string, token?: string) => {
     onError: (func: (err: any) => any) => any;
     onChange: (func: (state: boolean) => any) => any;
     subscribe: () => void;
+    abort: () => void;
 };
 export default Unlink;

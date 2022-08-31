@@ -4,6 +4,7 @@ declare const Profile: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     User: {
         UpdateProfile: (body: {
@@ -26,6 +27,7 @@ declare const Profile: {
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
             subscribe: () => void;
+            abort: () => void;
         };
         UpdatePassword: (body: {
             password: string;
@@ -37,6 +39,7 @@ declare const Profile: {
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
             subscribe: () => void;
+            abort: () => void;
         };
     };
     Department: {
@@ -50,6 +53,7 @@ declare const Profile: {
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
             subscribe: () => void;
+            abort: () => void;
         };
         UpdateProfile: (body: {
             title?: string | undefined;
@@ -63,6 +67,7 @@ declare const Profile: {
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
             subscribe: () => void;
+            abort: () => void;
         };
     };
 };

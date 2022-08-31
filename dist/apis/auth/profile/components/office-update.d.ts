@@ -9,6 +9,7 @@ declare const _default: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     UpdateProfile: (body: {
         title?: string | undefined;
@@ -22,6 +23,7 @@ declare const _default: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
 };
 export default _default;

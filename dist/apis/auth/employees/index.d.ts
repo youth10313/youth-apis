@@ -15,6 +15,7 @@ declare const Employees: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     UpdateEmployee: (id: string, body: {
         title?: string | undefined;
@@ -31,6 +32,7 @@ declare const Employees: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     DeleteEmployee: (id: string, token?: string) => {
         onComelete: (func: (data: {
@@ -39,12 +41,14 @@ declare const Employees: {
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
     GetEmployees: (token?: string) => {
         onComelete: (func: (data: import("../../../@types/official").Employee[]) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
         subscribe: () => void;
+        abort: () => void;
     };
 };
 export default Employees;
