@@ -4,7 +4,7 @@ declare const DeleteUser: (id: string, Authorization?: string) => {
     }) => any) => any;
     onError: (func: (err: any) => any) => any;
     onChange: (func: (state: boolean) => any) => any;
-    subscribe: () => void;
+    subscribe: (projects?: string[] | undefined) => void;
     abort: () => void;
 };
 export default DeleteUser;

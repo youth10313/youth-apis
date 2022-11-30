@@ -16,7 +16,7 @@ declare const Departments: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     UpdateDepartment: (id: string, body: {
@@ -33,7 +33,7 @@ declare const Departments: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     DeleteDepartment: (id: string, token?: string) => {
@@ -42,21 +42,21 @@ declare const Departments: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     GetDepartmentLevels: (direction: "up" | "down", departmentId: string) => {
         onComelete: (func: (data: import("../../../@types/official").Official[]) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     GetDepartments: (owners?: "" | "true", token?: string) => {
         onComelete: (func: (data: import("../../../@types/official").Official[]) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
 };

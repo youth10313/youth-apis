@@ -40,7 +40,15 @@ var YouthRoute = function (method, url, params, headers, body, timeout) {
             change = func;
             return obj;
         },
-        subscribe: function () {
+        subscribe: function (projects) {
+            if (projects && !params)
+                params = {};
+            if (projects && projects.length) {
+                var queryType_1 = "";
+                projects.forEach(function (item, i) {
+                    queryType_1 += item + (i === projects.length - 1 ? "" : "-");
+                });
+            }
             (0, exports.YouthAPI)(method, url, params, headers, body, change, controller, timeout)
                 .then(function (res) { return complete(res); })
                 .catch(function (err) { return error(err); });

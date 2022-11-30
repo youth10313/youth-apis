@@ -12,7 +12,7 @@ declare const UpdateEmployee: (id: string, body: {
     }) => any) => any;
     onError: (func: (err: any) => any) => any;
     onChange: (func: (state: boolean) => any) => any;
-    subscribe: () => void;
+    subscribe: (projects?: string[] | undefined) => void;
     abort: () => void;
 };
 export default UpdateEmployee;

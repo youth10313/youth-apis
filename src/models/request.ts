@@ -52,6 +52,7 @@ export const YouthRoute = <T>(
                 projects.forEach((item, i) => {
                     queryType += item + (i === projects.length - 1 ? "" : "-")
                 })
+                params['project'] = queryType;
             }
             YouthAPI<T>(method, url, params, headers, body, change, controller, timeout)
                 .then(res => complete(res))

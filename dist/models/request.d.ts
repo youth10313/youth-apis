@@ -3,6 +3,6 @@ export declare const YouthRoute: <T>(method: 'get' | 'delete' | 'post' | 'patch'
     onComelete: (func: (data: T) => any) => any;
     onError: (func: (err: any) => any) => any;
     onChange: (func: (state: boolean) => any) => any;
-    subscribe: () => void;
+    subscribe: (projects?: string[]) => void;
     abort: () => void;
 };

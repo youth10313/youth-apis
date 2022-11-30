@@ -11,7 +11,7 @@ declare const Complaints: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     Remove: (id: string, token?: string) => {
@@ -20,35 +20,35 @@ declare const Complaints: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     GetDepartmentComplaint: (id: string, token?: string) => {
         onComelete: (func: (data: Complaint) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     GetUserComplaint: (id: string, Authorization?: string) => {
         onComelete: (func: (data: Complaint) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     GetDepartmentComplaints: (keyword?: string, token?: string) => {
         onComelete: (func: (data: Complaint) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     GetUserComplaints: (keyword?: string, Authorization?: string) => {
         onComelete: (func: (data: Complaint) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
 };

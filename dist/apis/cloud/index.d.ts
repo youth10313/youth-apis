@@ -7,7 +7,7 @@ declare const Cloud: {
         }[]) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     Upload: (body: any, path?: string, token?: string) => {
@@ -16,7 +16,7 @@ declare const Cloud: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     Unlink: (path?: string, token?: string) => {
@@ -25,7 +25,7 @@ declare const Cloud: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
 };

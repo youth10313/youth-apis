@@ -12,7 +12,7 @@ declare const Reports: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     UpdateProject: (id: string, body: {
@@ -27,7 +27,7 @@ declare const Reports: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     RemoveProject: (id: string, token?: string) => {
@@ -36,21 +36,21 @@ declare const Reports: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     GetProjects: (token?: string) => {
         onComelete: (func: (data: ReportProject[]) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     GetUserProjects: (Authorization?: string) => {
         onComelete: (func: (data: ReportProject[]) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     SendUserReport: (projectId: string, id: string, answers?: string[], Authorization?: string) => {
@@ -59,21 +59,21 @@ declare const Reports: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     GetProjectReports: (id: string, token?: string) => {
         onComelete: (func: (data: Report[]) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     GetUserProjectReports: (id: string, Authorization?: string) => {
         onComelete: (func: (data: Report[]) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
 };

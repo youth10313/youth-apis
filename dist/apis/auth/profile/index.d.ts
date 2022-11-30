@@ -3,7 +3,7 @@ declare const Profile: {
         onComelete: (func: (data: import("../../../@types/user").User) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     User: {
@@ -26,7 +26,7 @@ declare const Profile: {
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         UpdatePassword: (body: {
@@ -38,7 +38,7 @@ declare const Profile: {
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
     };
@@ -52,7 +52,7 @@ declare const Profile: {
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         UpdateProfile: (body: {
@@ -66,7 +66,7 @@ declare const Profile: {
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
     };

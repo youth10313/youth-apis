@@ -7,14 +7,14 @@ declare const Musics: {
             onComelete: (func: (data: Track) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
             onComelete: (func: (data: Pagination<Track>) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         create: (body: Track, locale: string, Authorization?: string) => {
@@ -23,7 +23,7 @@ declare const Musics: {
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         update: (id: string, body: any, locale: string, Authorization?: string) => {
@@ -32,7 +32,7 @@ declare const Musics: {
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         remove: (id: string, locale: string, Authorization?: string) => {
@@ -41,28 +41,28 @@ declare const Musics: {
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         trash: (locale: string, Authorization?: string) => {
             onComelete: (func: (data: Track) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         empty: (locale: string, Authorization?: string) => {
             onComelete: (func: (data: Track) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         restore: (id: string, locale: string, Authorization?: string) => {
             onComelete: (func: (data: Track) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
     };
@@ -71,14 +71,14 @@ declare const Musics: {
             onComelete: (func: (data: Podcast) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
             onComelete: (func: (data: Pagination<Podcast>) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         create: (body: Podcast, locale: string, Authorization?: string) => {
@@ -87,7 +87,7 @@ declare const Musics: {
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         update: (id: string, body: any, locale: string, Authorization?: string) => {
@@ -96,7 +96,7 @@ declare const Musics: {
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         remove: (id: string, locale: string, Authorization?: string) => {
@@ -105,28 +105,28 @@ declare const Musics: {
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         trash: (locale: string, Authorization?: string) => {
             onComelete: (func: (data: Podcast) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         empty: (locale: string, Authorization?: string) => {
             onComelete: (func: (data: Podcast) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         restore: (id: string, locale: string, Authorization?: string) => {
             onComelete: (func: (data: Podcast) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
     };

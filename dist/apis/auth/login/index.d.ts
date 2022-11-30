@@ -10,7 +10,7 @@ declare const Login: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     LoginUserStepTwo: (body: {
@@ -26,7 +26,7 @@ declare const Login: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     RenewUserToken: (_private?: string) => {
@@ -37,7 +37,7 @@ declare const Login: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     LoginOfficial: (body: {
@@ -51,7 +51,7 @@ declare const Login: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     GetSessions: (Authorization?: string) => {
@@ -82,7 +82,7 @@ declare const Login: {
         }[]) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     ResetPassword: {
@@ -95,7 +95,7 @@ declare const Login: {
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
         StepTwo: (body: {
@@ -108,7 +108,7 @@ declare const Login: {
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: () => void;
+            subscribe: (projects?: string[] | undefined) => void;
             abort: () => void;
         };
     };
@@ -118,7 +118,7 @@ declare const Login: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
     LogoutUser: (_private?: string) => {
@@ -127,7 +127,7 @@ declare const Login: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: () => void;
+        subscribe: (projects?: string[] | undefined) => void;
         abort: () => void;
     };
 };

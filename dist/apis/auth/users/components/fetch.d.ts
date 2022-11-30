@@ -4,7 +4,7 @@ declare const GetUsers: (page: number, keyword: string, Authorization?: string) 
     onComelete: (func: (data: Pagination<User>) => any) => any;
     onError: (func: (err: any) => any) => any;
     onChange: (func: (state: boolean) => any) => any;
-    subscribe: () => void;
+    subscribe: (projects?: string[] | undefined) => void;
     abort: () => void;
 };
 export default GetUsers;
