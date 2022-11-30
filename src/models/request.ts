@@ -45,7 +45,14 @@ export const YouthRoute = <T>(
             change = func;
             return obj
         },
-        subscribe: () => {
+        subscribe: (projects?: string[]) => {
+            if (projects && !params) params = {}
+            if (projects && projects.length) {
+                let queryType = "";
+                projects.forEach((item, i) => {
+                    queryType += item + (i === projects.length - 1 ? "" : "-")
+                })
+            }
             YouthAPI<T>(method, url, params, headers, body, change, controller, timeout)
                 .then(res => complete(res))
                 .catch(err => error(err))
