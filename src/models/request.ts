@@ -1,4 +1,5 @@
 import axios from "axios"
+import { Args } from "../@types/subscribe";
 
 export const YouthAPI = <T>(
     method: 'get' | 'delete' | 'post' | 'patch',
@@ -28,12 +29,12 @@ export const YouthRoute = <T>(
     body: any,
     timeout = 1000 * 13) => {
     const controller = new AbortController();
-    let complete: (data: T) => any
-    let error: (err: any) => any
-    let change: (state: boolean) => any
+    let complete: (data: T) => any = res => res
+    let error: (err: any) => any = err => err
+    let change: (state: boolean) => any = state => state
     let abort = () => controller.abort()
     const obj = {
-        onComelete: (func: (data: T) => any) => {
+        onComplete: (func: (data: T) => any) => {
             complete = func;
             return obj;
         },
@@ -45,7 +46,15 @@ export const YouthRoute = <T>(
             change = func;
             return obj
         },
-        subscribe: (projects?: string[]) => {
+        subscribe: (projects?: string[], args?: Args) => {
+            if (args) {
+                if (args.id && args.cid) {
+                    url = url.replace(args.cid, args.id);
+                }
+                params = args.params || params;
+                headers = args.headers || headers;
+                body = args.body || body;
+            }
             if (projects && !params) params = {}
             if (projects && projects.length) {
                 let queryType = "";

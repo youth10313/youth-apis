@@ -48,6 +48,7 @@ var YouthRoute = function (method, url, params, headers, body, timeout) {
                 projects.forEach(function (item, i) {
                     queryType_1 += item + (i === projects.length - 1 ? "" : "-");
                 });
+                params['project'] = queryType_1;
             }
             (0, exports.YouthAPI)(method, url, params, headers, body, change, controller, timeout)
                 .then(function (res) { return complete(res); })
