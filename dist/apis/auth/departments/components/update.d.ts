@@ -7,12 +7,12 @@ declare const UpdateDepartment: (id: string, body: {
     telegramId?: string;
     locale?: string;
 }, token?: string) => {
-    onComelete: (func: (data: {
+    onComplete: (func: (data: {
         msg: "UPDATED";
     }) => any) => any;
     onError: (func: (err: any) => any) => any;
     onChange: (func: (state: boolean) => any) => any;
-    subscribe: (projects?: string[] | undefined) => void;
+    subscribe: (projects?: string[] | undefined, args?: import("../../../../@types/subscribe").Args | undefined) => void;
     abort: () => void;
 };
 export default UpdateDepartment;

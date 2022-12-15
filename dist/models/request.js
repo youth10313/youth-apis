@@ -23,12 +23,12 @@ exports.YouthAPI = YouthAPI;
 var YouthRoute = function (method, url, params, headers, body, timeout) {
     if (timeout === void 0) { timeout = 1000 * 13; }
     var controller = new AbortController();
-    var complete;
-    var error;
-    var change;
+    var complete = function (res) { return res; };
+    var error = function (err) { return err; };
+    var change = function (state) { return state; };
     var abort = function () { return controller.abort(); };
     var obj = {
-        onComelete: function (func) {
+        onComplete: function (func) {
             complete = func;
             return obj;
         },
@@ -40,7 +40,15 @@ var YouthRoute = function (method, url, params, headers, body, timeout) {
             change = func;
             return obj;
         },
-        subscribe: function (projects) {
+        subscribe: function (projects, args) {
+            if (args) {
+                if (args.id && args.cid) {
+                    url = url.replace(args.cid, args.id);
+                }
+                params = args.params || params;
+                headers = args.headers || headers;
+                body = args.body || body;
+            }
             if (projects && !params)
                 params = {};
             if (projects && projects.length) {

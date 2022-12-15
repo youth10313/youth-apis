@@ -6,35 +6,35 @@ declare const Communication: {
         receiver: string;
         content: string;
     }, token?: string) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             id: string;
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     Remove: (id: string, token?: string) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             msg: string;
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     Mails: (box: 'inbox' | 'outbox', token?: string) => {
-        onComelete: (func: (data: Pagination<Letter>) => any) => any;
+        onComplete: (func: (data: Pagination<Letter>) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     Mail: (id: string, box: 'inbox' | 'outbox', token?: string) => {
-        onComelete: (func: (data: Letter) => any) => any;
+        onComplete: (func: (data: Letter) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
 };

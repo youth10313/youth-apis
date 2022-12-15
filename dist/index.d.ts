@@ -5,12 +5,12 @@ declare const YouthServers: {
                 email: string;
                 password: string;
             }) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "RESEND_DATA_WITH_CODE";
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             LoginUserStepTwo: (body: {
@@ -18,7 +18,7 @@ declare const YouthServers: {
                 password: string;
                 code: string;
             }) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     token: string;
                     privateKey: string;
                     msg: "LOGGED_IN_SUCCESSFULLY";
@@ -26,36 +26,36 @@ declare const YouthServers: {
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             RenewUserToken: (_private?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "TOKEN_SENT";
                     time: number;
                     token: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             LoginOfficial: (body: {
                 phrase: string;
                 password: string;
             }) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "TOKEN_CREATED";
                     _employee?: import("./@types/official").Employee | undefined;
                     _department: import("./@types/official").Official;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetSessions: (Authorization?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     _id: string;
                     device: {
                         parser: {
@@ -82,20 +82,20 @@ declare const YouthServers: {
                 }[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             ResetPassword: {
                 StepOne: (body: {
                     email: string;
                 }) => {
-                    onComelete: (func: (data: {
+                    onComplete: (func: (data: {
                         msg: "ACCCEPTED";
                         type: 2 | 1;
                     }) => any) => any;
                     onError: (func: (err: any) => any) => any;
                     onChange: (func: (state: boolean) => any) => any;
-                    subscribe: (projects?: string[] | undefined) => void;
+                    subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                     abort: () => void;
                 };
                 StepTwo: (body: {
@@ -103,31 +103,31 @@ declare const YouthServers: {
                     password: string;
                     code: string;
                 }) => {
-                    onComelete: (func: (data: {
+                    onComplete: (func: (data: {
                         msg: "ACTIVATED";
                     }) => any) => any;
                     onError: (func: (err: any) => any) => any;
                     onChange: (func: (state: boolean) => any) => any;
-                    subscribe: (projects?: string[] | undefined) => void;
+                    subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                     abort: () => void;
                 };
             };
             LogoutOffice: (token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "LOGGED_OUT";
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             LogoutUser: (_private?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "LOGGED_OUT";
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };
@@ -135,13 +135,13 @@ declare const YouthServers: {
             CheckEmail: (body: {
                 email: string;
             }) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "ACCCEPTED";
                     type: 2 | 1;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             SendForm: (body: {
@@ -150,21 +150,21 @@ declare const YouthServers: {
                 email: string;
                 nickname: string;
             }) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     userId: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };
         Profile: {
             MyProfile: (Authorization?: string) => {
-                onComelete: (func: (data: import("./@types/user").User) => any) => any;
+                onComplete: (func: (data: import("./@types/user").User) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             User: {
@@ -182,24 +182,24 @@ declare const YouthServers: {
                     twitter?: string | undefined;
                     instagram?: string | undefined;
                 }, Authorization?: string) => {
-                    onComelete: (func: (data: {
+                    onComplete: (func: (data: {
                         msg: "UPDATED";
                     }) => any) => any;
                     onError: (func: (err: any) => any) => any;
                     onChange: (func: (state: boolean) => any) => any;
-                    subscribe: (projects?: string[] | undefined) => void;
+                    subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                     abort: () => void;
                 };
                 UpdatePassword: (body: {
                     password: string;
                     newpassword: string;
                 }, Authorization?: string) => {
-                    onComelete: (func: (data: {
+                    onComplete: (func: (data: {
                         msg: "UPDATED";
                     }) => any) => any;
                     onError: (func: (err: any) => any) => any;
                     onChange: (func: (state: boolean) => any) => any;
-                    subscribe: (projects?: string[] | undefined) => void;
+                    subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                     abort: () => void;
                 };
             };
@@ -208,12 +208,12 @@ declare const YouthServers: {
                     password: string;
                     newpassword: string;
                 }, token?: string) => {
-                    onComelete: (func: (data: {
+                    onComplete: (func: (data: {
                         msg: "UPDATED";
                     }) => any) => any;
                     onError: (func: (err: any) => any) => any;
                     onChange: (func: (state: boolean) => any) => any;
-                    subscribe: (projects?: string[] | undefined) => void;
+                    subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                     abort: () => void;
                 };
                 UpdateProfile: (body: {
@@ -222,12 +222,12 @@ declare const YouthServers: {
                     telegramId?: string | undefined;
                     locale?: string | undefined;
                 }, token?: string) => {
-                    onComelete: (func: (data: {
+                    onComplete: (func: (data: {
                         msg: "UPDATED";
                     }) => any) => any;
                     onError: (func: (err: any) => any) => any;
                     onChange: (func: (state: boolean) => any) => any;
-                    subscribe: (projects?: string[] | undefined) => void;
+                    subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                     abort: () => void;
                 };
             };
@@ -250,12 +250,12 @@ declare const YouthServers: {
                 twitter?: string | undefined;
                 instagram?: string | undefined;
             }, Authorization?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     id: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             UpdateUser: (id: string, body: {
@@ -275,35 +275,35 @@ declare const YouthServers: {
                 twitter?: string | undefined;
                 instagram?: string | undefined;
             }, Authorization?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "UPDATED";
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             DeleteUser: (id: string, Authorization?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "DELETED";
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetUsers: (page: number, keyword: string, Authorization?: string) => {
-                onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/user").User>) => any) => any;
+                onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/user").User>) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetUser: (id: string, Authorization?: string) => {
-                onComelete: (func: (data: import("./@types/user").User) => any) => any;
+                onComplete: (func: (data: import("./@types/user").User) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };
@@ -320,12 +320,12 @@ declare const YouthServers: {
                 telegramId?: string | undefined;
                 responseTo?: string | undefined;
             }, token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     id: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             UpdateDepartment: (id: string, body: {
@@ -337,35 +337,35 @@ declare const YouthServers: {
                 telegramId?: string | undefined;
                 locale?: string | undefined;
             }, token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "UPDATED";
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             DeleteDepartment: (id: string, token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "DELETED";
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetDepartmentLevels: (direction: "up" | "down", departmentId: string) => {
-                onComelete: (func: (data: import("./@types/official").Official[]) => any) => any;
+                onComplete: (func: (data: import("./@types/official").Official[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetDepartments: (owners?: "" | "true", token?: string) => {
-                onComelete: (func: (data: import("./@types/official").Official[]) => any) => any;
+                onComplete: (func: (data: import("./@types/official").Official[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };
@@ -380,12 +380,12 @@ declare const YouthServers: {
                 locale: string;
                 telegramId?: string | undefined;
             }, token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     id: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             UpdateEmployee: (id: string, body: {
@@ -397,110 +397,110 @@ declare const YouthServers: {
                 locale?: string | undefined;
                 telegramId?: string | undefined;
             }, token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "UPDATED";
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             DeleteEmployee: (id: string, token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "DELETED";
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetEmployees: (token?: string) => {
-                onComelete: (func: (data: import("./@types/official").Employee[]) => any) => any;
+                onComplete: (func: (data: import("./@types/official").Employee[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };
     };
     Cloud: {
         ReadDirectory: (path?: string, token?: string) => {
-            onComelete: (func: (data: {
+            onComplete: (func: (data: {
                 name: string;
                 isDir: boolean;
                 size: number;
             }[]) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: (projects?: string[] | undefined) => void;
+            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
             abort: () => void;
         };
         Upload: (body: any, path?: string, token?: string) => {
-            onComelete: (func: (data: {
+            onComplete: (func: (data: {
                 msg: "FILE_UPLOADED";
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: (projects?: string[] | undefined) => void;
+            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
             abort: () => void;
         };
         Unlink: (path?: string, token?: string) => {
-            onComelete: (func: (data: {
+            onComplete: (func: (data: {
                 msg: "FILE_DELETED";
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: (projects?: string[] | undefined) => void;
+            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
             abort: () => void;
         };
     };
     Data: {
         NLP: {
             fetch: (locale: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             create: (name: string, locale: string, Authorization?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             update: (id: string, name: string, locale: string, Authorization?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             remove: (id: string, Authorization?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             train: (id: string, namespace: string, questions: string[], answers: string[], locale: string, Authorization?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             ask: (id: string, q: string, locale: string, Authorization?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };
         Core: (q: string, locale: string) => {
-            onComelete: (func: (data: import("./@types/common").Pagination<{
+            onComplete: (func: (data: import("./@types/common").Pagination<{
                 _id: string;
                 title: string;
                 latinTitle?: string | undefined;
@@ -510,136 +510,136 @@ declare const YouthServers: {
             }>) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: (projects?: string[] | undefined) => void;
+            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
             abort: () => void;
         };
         Feeds: {
             Bigbang: {
                 posts: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
+                        onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/post").Post, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: import("./@types/post").Post, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
                 categories: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
+                        onComplete: (func: (data: import("./@types/category").Category[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
@@ -647,129 +647,129 @@ declare const YouthServers: {
             Blog: {
                 posts: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
+                        onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/post").Post, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: import("./@types/post").Post, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
                 categories: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
+                        onComplete: (func: (data: import("./@types/category").Category[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                        onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
@@ -777,129 +777,129 @@ declare const YouthServers: {
             Prays: {
                 posts: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
+                        onComplete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/pray").Pray>) => any) => any;
+                        onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/pray").Pray>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/pray").Pray, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
+                        onComplete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
+                        onComplete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
+                        onComplete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
                 categories: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
+                        onComplete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
+                        onComplete: (func: (data: import("./@types/category").Category[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
+                        onComplete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
+                        onComplete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/pray").Pray) => any) => any;
+                        onComplete: (func: (data: import("./@types/pray").Pray) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
@@ -908,129 +908,129 @@ declare const YouthServers: {
                 Doubts: {
                     posts: {
                         fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
+                            onComplete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                            onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/doubt").Doubt>) => any) => any;
+                            onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/doubt").Doubt>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         create: (body: import("./@types/doubt").Doubt, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 id: string;
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         update: (id: string, body: any, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "UPDATED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "DELETED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
+                            onComplete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
+                            onComplete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
+                            onComplete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                     };
                     categories: {
                         fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
+                            onComplete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         fetch: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
+                            onComplete: (func: (data: import("./@types/category").Category[]) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 id: string;
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "UPDATED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "DELETED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
+                            onComplete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
+                            onComplete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
+                            onComplete: (func: (data: import("./@types/doubt").Doubt) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                     };
@@ -1038,129 +1038,129 @@ declare const YouthServers: {
                 Questions: {
                     posts: {
                         fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/question").Question) => any) => any;
+                            onComplete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                            onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/question").Question>) => any) => any;
+                            onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/question").Question>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         create: (body: import("./@types/question").Question, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 id: string;
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         update: (id: string, body: any, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "UPDATED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "DELETED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/question").Question) => any) => any;
+                            onComplete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/question").Question) => any) => any;
+                            onComplete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/question").Question) => any) => any;
+                            onComplete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                     };
                     categories: {
                         fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/question").Question) => any) => any;
+                            onComplete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         fetch: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
+                            onComplete: (func: (data: import("./@types/category").Category[]) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 id: string;
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "UPDATED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "DELETED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/question").Question) => any) => any;
+                            onComplete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/question").Question) => any) => any;
+                            onComplete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/question").Question) => any) => any;
+                            onComplete: (func: (data: import("./@types/question").Question) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                     };
@@ -1170,129 +1170,129 @@ declare const YouthServers: {
                 Ethics: {
                     posts: {
                         fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                            onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
+                            onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         create: (body: import("./@types/post").Post, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 id: string;
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         update: (id: string, body: any, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "UPDATED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "DELETED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                     };
                     categories: {
                         fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         fetch: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
+                            onComplete: (func: (data: import("./@types/category").Category[]) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 id: string;
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "UPDATED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "DELETED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                     };
@@ -1300,129 +1300,129 @@ declare const YouthServers: {
                 Beliefs: {
                     posts: {
                         fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                            onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
+                            onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         create: (body: import("./@types/post").Post, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 id: string;
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         update: (id: string, body: any, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "UPDATED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "DELETED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                     };
                     categories: {
                         fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         fetch: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
+                            onComplete: (func: (data: import("./@types/category").Category[]) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 id: string;
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "UPDATED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "DELETED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                     };
@@ -1430,129 +1430,129 @@ declare const YouthServers: {
                 Sharia: {
                     posts: {
                         fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                            onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
+                            onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         create: (body: import("./@types/post").Post, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 id: string;
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         update: (id: string, body: any, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "UPDATED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "DELETED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                     };
                     categories: {
                         fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         fetch: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
+                            onComplete: (func: (data: import("./@types/category").Category[]) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 id: string;
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "UPDATED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "DELETED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                     };
@@ -1560,129 +1560,129 @@ declare const YouthServers: {
                 Civilizations: {
                     posts: {
                         fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                            onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
+                            onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/post").Post>) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         create: (body: import("./@types/post").Post, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 id: string;
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         update: (id: string, body: any, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "UPDATED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "DELETED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                     };
                     categories: {
                         fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         fetch: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
+                            onComplete: (func: (data: import("./@types/category").Category[]) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 id: string;
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "UPDATED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         remove: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: {
+                            onComplete: (func: (data: {
                                 msg: "DELETED";
                             }) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         trash: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         empty: (locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                         restore: (id: string, locale: string, Authorization?: string) => {
-                            onComelete: (func: (data: import("./@types/post").Post) => any) => any;
+                            onComplete: (func: (data: import("./@types/post").Post) => any) => any;
                             onError: (func: (err: any) => any) => any;
                             onChange: (func: (state: boolean) => any) => any;
-                            subscribe: (projects?: string[] | undefined) => void;
+                            subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                             abort: () => void;
                         };
                     };
@@ -1691,129 +1691,129 @@ declare const YouthServers: {
             Library: {
                 posts: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/book").Book) => any) => any;
+                        onComplete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/book").Book>) => any) => any;
+                        onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/book").Book>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/book").Book, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/book").Book) => any) => any;
+                        onComplete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/book").Book) => any) => any;
+                        onComplete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/book").Book) => any) => any;
+                        onComplete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
                 categories: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/book").Book) => any) => any;
+                        onComplete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/category").Category[]) => any) => any;
+                        onComplete: (func: (data: import("./@types/category").Category[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/category").Category, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: import("./@types/category").CategoryOption, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/book").Book) => any) => any;
+                        onComplete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/book").Book) => any) => any;
+                        onComplete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/book").Book) => any) => any;
+                        onComplete: (func: (data: import("./@types/book").Book) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
@@ -1821,321 +1821,321 @@ declare const YouthServers: {
             Main: {
                 Sermons: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/sermon").Sermon) => any) => any;
+                        onComplete: (func: (data: import("./@types/sermon").Sermon) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/sermon").Sermon[]) => any) => any;
+                        onComplete: (func: (data: import("./@types/sermon").Sermon[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/sermon").Sermon, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/sermon").Sermon) => any) => any;
+                        onComplete: (func: (data: import("./@types/sermon").Sermon) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/sermon").Sermon) => any) => any;
+                        onComplete: (func: (data: import("./@types/sermon").Sermon) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/sermon").Sermon) => any) => any;
+                        onComplete: (func: (data: import("./@types/sermon").Sermon) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
                 Meetings: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/meeting").Meeting) => any) => any;
+                        onComplete: (func: (data: import("./@types/meeting").Meeting) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/meeting").Meeting[]) => any) => any;
+                        onComplete: (func: (data: import("./@types/meeting").Meeting[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/meeting").Meeting, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/meeting").Meeting) => any) => any;
+                        onComplete: (func: (data: import("./@types/meeting").Meeting) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/meeting").Meeting) => any) => any;
+                        onComplete: (func: (data: import("./@types/meeting").Meeting) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/meeting").Meeting) => any) => any;
+                        onComplete: (func: (data: import("./@types/meeting").Meeting) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
                 Statements: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/statement").Statement) => any) => any;
+                        onComplete: (func: (data: import("./@types/statement").Statement) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/statement").Statement[]) => any) => any;
+                        onComplete: (func: (data: import("./@types/statement").Statement[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/statement").Statement, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/statement").Statement) => any) => any;
+                        onComplete: (func: (data: import("./@types/statement").Statement) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/statement").Statement) => any) => any;
+                        onComplete: (func: (data: import("./@types/statement").Statement) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/statement").Statement) => any) => any;
+                        onComplete: (func: (data: import("./@types/statement").Statement) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
                 Ansars: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/ansar").Ansar) => any) => any;
+                        onComplete: (func: (data: import("./@types/ansar").Ansar) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/ansar").Ansar[]) => any) => any;
+                        onComplete: (func: (data: import("./@types/ansar").Ansar[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/ansar").Ansar, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/ansar").Ansar) => any) => any;
+                        onComplete: (func: (data: import("./@types/ansar").Ansar) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/ansar").Ansar) => any) => any;
+                        onComplete: (func: (data: import("./@types/ansar").Ansar) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/ansar").Ansar) => any) => any;
+                        onComplete: (func: (data: import("./@types/ansar").Ansar) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
                 Histories: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/history").History) => any) => any;
+                        onComplete: (func: (data: import("./@types/history").History) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/history").History[]) => any) => any;
+                        onComplete: (func: (data: import("./@types/history").History[]) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/history").History, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/history").History) => any) => any;
+                        onComplete: (func: (data: import("./@types/history").History) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/history").History) => any) => any;
+                        onComplete: (func: (data: import("./@types/history").History) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/history").History) => any) => any;
+                        onComplete: (func: (data: import("./@types/history").History) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
@@ -2143,129 +2143,129 @@ declare const YouthServers: {
             Musics: {
                 Tracks: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/track").Track) => any) => any;
+                        onComplete: (func: (data: import("./@types/track").Track) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/track").Track>) => any) => any;
+                        onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/track").Track>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/track").Track, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/track").Track) => any) => any;
+                        onComplete: (func: (data: import("./@types/track").Track) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/track").Track) => any) => any;
+                        onComplete: (func: (data: import("./@types/track").Track) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/track").Track) => any) => any;
+                        onComplete: (func: (data: import("./@types/track").Track) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
                 Podcasts: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/podcast").Podcast) => any) => any;
+                        onComplete: (func: (data: import("./@types/podcast").Podcast) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/podcast").Podcast>) => any) => any;
+                        onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/podcast").Podcast>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/podcast").Podcast, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/podcast").Podcast) => any) => any;
+                        onComplete: (func: (data: import("./@types/podcast").Podcast) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/podcast").Podcast) => any) => any;
+                        onComplete: (func: (data: import("./@types/podcast").Podcast) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/podcast").Podcast) => any) => any;
+                        onComplete: (func: (data: import("./@types/podcast").Podcast) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
@@ -2273,129 +2273,129 @@ declare const YouthServers: {
             Reasons: {
                 ReasonsFeeds: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/reason").Reason) => any) => any;
+                        onComplete: (func: (data: import("./@types/reason").Reason) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/reason").Reason) => any) => any;
+                        onComplete: (func: (data: import("./@types/reason").Reason) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/reason").Reason, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/reason").Reason) => any) => any;
+                        onComplete: (func: (data: import("./@types/reason").Reason) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/reason").Reason) => any) => any;
+                        onComplete: (func: (data: import("./@types/reason").Reason) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/reason").Reason) => any) => any;
+                        onComplete: (func: (data: import("./@types/reason").Reason) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
                 Religions: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/religion").Religion) => any) => any;
+                        onComplete: (func: (data: import("./@types/religion").Religion) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/religion").Religion) => any) => any;
+                        onComplete: (func: (data: import("./@types/religion").Religion) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/religion").Religion, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/religion").Religion) => any) => any;
+                        onComplete: (func: (data: import("./@types/religion").Religion) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/religion").Religion) => any) => any;
+                        onComplete: (func: (data: import("./@types/religion").Religion) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/religion").Religion) => any) => any;
+                        onComplete: (func: (data: import("./@types/religion").Religion) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
@@ -2403,216 +2403,216 @@ declare const YouthServers: {
             School: {
                 Classes: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/class").Class) => any) => any;
+                        onComplete: (func: (data: import("./@types/class").Class) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/class").Class>) => any) => any;
+                        onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/class").Class>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/class").Class, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/class").Class) => any) => any;
+                        onComplete: (func: (data: import("./@types/class").Class) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/class").Class) => any) => any;
+                        onComplete: (func: (data: import("./@types/class").Class) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/class").Class) => any) => any;
+                        onComplete: (func: (data: import("./@types/class").Class) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
                 Lessons: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/lesson").Lesson) => any) => any;
+                        onComplete: (func: (data: import("./@types/lesson").Lesson) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/lesson").Lesson>) => any) => any;
+                        onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/lesson").Lesson>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/lesson").Lesson, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/lesson").Lesson) => any) => any;
+                        onComplete: (func: (data: import("./@types/lesson").Lesson) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/lesson").Lesson) => any) => any;
+                        onComplete: (func: (data: import("./@types/lesson").Lesson) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/lesson").Lesson) => any) => any;
+                        onComplete: (func: (data: import("./@types/lesson").Lesson) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
                 Teachers: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/teacher").Teacher) => any) => any;
+                        onComplete: (func: (data: import("./@types/teacher").Teacher) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/teacher").Teacher>) => any) => any;
+                        onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/teacher").Teacher>) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     create: (body: import("./@types/teacher").Teacher, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             id: string;
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "UPDATED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: {
+                        onComplete: (func: (data: {
                             msg: "DELETED";
                         }) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/teacher").Teacher) => any) => any;
+                        onComplete: (func: (data: import("./@types/teacher").Teacher) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/teacher").Teacher) => any) => any;
+                        onComplete: (func: (data: import("./@types/teacher").Teacher) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComelete: (func: (data: import("./@types/teacher").Teacher) => any) => any;
+                        onComplete: (func: (data: import("./@types/teacher").Teacher) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
                 Chapters: {
                     Passed: (Authorization?: string) => {
-                        onComelete: (func: (data: unknown) => any) => any;
+                        onComplete: (func: (data: unknown) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     Pass: (lessonId: string, Authorization?: string) => {
-                        onComelete: (func: (data: unknown) => any) => any;
+                        onComplete: (func: (data: unknown) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     UnPass: (lessonId: string, Authorization?: string) => {
-                        onComelete: (func: (data: unknown) => any) => any;
+                        onComplete: (func: (data: unknown) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        subscribe: (projects?: string[] | undefined) => void;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
@@ -2620,81 +2620,81 @@ declare const YouthServers: {
         };
         Settings: {
             AdjustCluster: (app: string, size: number, locale: string, Authorization?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             AdjustFont: (app: string, url: string, locale: string, Authorization?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             Refresh: (app: string, locale: string, Authorization?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };
         Translations: {
             Translate: (app: string, i18n: import("./@types/common").I18n, locale: string, Authorization?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "TRANSLATED";
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             App: (app: string) => {
-                onComelete: (func: (data: import("./@types/common").I18nFull) => any) => any;
+                onComplete: (func: (data: import("./@types/common").I18nFull) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             Locale: (app: string, locale: string) => {
-                onComelete: (func: (data: import("./@types/common").I18nFull) => any) => any;
+                onComplete: (func: (data: import("./@types/common").I18nFull) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             Module: (app: string, locale: string, module: string) => {
-                onComelete: (func: (data: import("./@types/common").I18nFull) => any) => any;
+                onComplete: (func: (data: import("./@types/common").I18nFull) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             AddLocale: (app: string, locale: string, Authorization?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "DONE";
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             AppLocales: (app: string) => {
-                onComelete: (func: (data: string[]) => any) => any;
+                onComplete: (func: (data: string[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             RemoveLocale: (app: string, locale: string, Authorization?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "DONE";
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };
@@ -2702,141 +2702,141 @@ declare const YouthServers: {
     Office: {
         Ads: {
             CreateUserAd: (body: import("./@types/ads").AdBody, Authorization?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     id: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             UpdateUserAd: (body: any, Authorization?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     id: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             SignAds: (token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     id: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             RemoveAd: (id: string, token?: string, Authorization?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: "DELETED";
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetDepartmentAds: (from: Date | undefined, to: Date | undefined, signed: boolean, count: boolean, token?: string) => {
-                onComelete: (func: (data: import("./@types/ads").Ad[]) => any) => any;
+                onComplete: (func: (data: import("./@types/ads").Ad[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetUserAds: (from: Date | undefined, to: Date | undefined, signed: boolean, count: boolean, Authorization?: string) => {
-                onComelete: (func: (data: import("./@types/ads").Ad[]) => any) => any;
+                onComplete: (func: (data: import("./@types/ads").Ad[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };
         Blazer: {
             Send: (departments: string[], message: string, token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             Cancel: (id: string, token?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             History: (token?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };
         Citizens: {
             CreateLink: (token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     id: string;
                     link: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             DeleteLink: (token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             Join: (linkHash: string, Authorization?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             Left: (id: string, Authorization?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             ApproveCitizen: (userId: string, token?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             KickCitizen: (userId: string, token?: string) => {
-                onComelete: (func: (data: unknown) => any) => any;
+                onComplete: (func: (data: unknown) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetUserDepartments: (Authorization?: string) => {
-                onComelete: (func: (data: import("./@types/citizen").Citizen[]) => any) => any;
+                onComplete: (func: (data: import("./@types/citizen").Citizen[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetDepartmentCitizens: (type: "" | "all" | "lobby", token?: string) => {
-                onComelete: (func: (data: import("./@types/citizen").Citizen[]) => any) => any;
+                onComplete: (func: (data: import("./@types/citizen").Citizen[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };
@@ -2846,35 +2846,35 @@ declare const YouthServers: {
                 receiver: string;
                 content: string;
             }, token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     id: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             Remove: (id: string, token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             Mails: (box: "inbox" | "outbox", token?: string) => {
-                onComelete: (func: (data: import("./@types/common").Pagination<import("./@types/letter").Letter>) => any) => any;
+                onComplete: (func: (data: import("./@types/common").Pagination<import("./@types/letter").Letter>) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             Mail: (id: string, box: "inbox" | "outbox", token?: string) => {
-                onComelete: (func: (data: import("./@types/letter").Letter) => any) => any;
+                onComplete: (func: (data: import("./@types/letter").Letter) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };
@@ -2885,49 +2885,49 @@ declare const YouthServers: {
                 department: string;
                 because?: string | undefined;
             }, Authorization?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     id: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             Remove: (id: string, token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetDepartmentComplaint: (id: string, token?: string) => {
-                onComelete: (func: (data: import("./@types/complaint").Complaint) => any) => any;
+                onComplete: (func: (data: import("./@types/complaint").Complaint) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetUserComplaint: (id: string, Authorization?: string) => {
-                onComelete: (func: (data: import("./@types/complaint").Complaint) => any) => any;
+                onComplete: (func: (data: import("./@types/complaint").Complaint) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetDepartmentComplaints: (keyword?: string, token?: string) => {
-                onComelete: (func: (data: import("./@types/complaint").Complaint) => any) => any;
+                onComplete: (func: (data: import("./@types/complaint").Complaint) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetUserComplaints: (keyword?: string, Authorization?: string) => {
-                onComelete: (func: (data: import("./@types/complaint").Complaint) => any) => any;
+                onComplete: (func: (data: import("./@types/complaint").Complaint) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };
@@ -2939,12 +2939,12 @@ declare const YouthServers: {
                 members: string[];
                 questions: [];
             }, token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     id: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             UpdateProject: (id: string, body: {
@@ -2954,58 +2954,58 @@ declare const YouthServers: {
                 members: string[];
                 questions: [];
             }, token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             RemoveProject: (id: string, token?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetProjects: (token?: string) => {
-                onComelete: (func: (data: import("./@types/report").ReportProject[]) => any) => any;
+                onComplete: (func: (data: import("./@types/report").ReportProject[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetUserProjects: (Authorization?: string) => {
-                onComelete: (func: (data: import("./@types/report").ReportProject[]) => any) => any;
+                onComplete: (func: (data: import("./@types/report").ReportProject[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             SendUserReport: (projectId: string, id: string, answers?: string[] | undefined, Authorization?: string) => {
-                onComelete: (func: (data: {
+                onComplete: (func: (data: {
                     msg: string;
                 }) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetProjectReports: (id: string, token?: string) => {
-                onComelete: (func: (data: import("./@types/report").Report[]) => any) => any;
+                onComplete: (func: (data: import("./@types/report").Report[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
             GetUserProjectReports: (id: string, Authorization?: string) => {
-                onComelete: (func: (data: import("./@types/report").Report[]) => any) => any;
+                onComplete: (func: (data: import("./@types/report").Report[]) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                subscribe: (projects?: string[] | undefined) => void;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
         };

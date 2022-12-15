@@ -1,25 +1,25 @@
 declare const Blazer: {
     Send: (departments: string[], message: string, token?: string) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             msg: string;
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     Cancel: (id: string, token?: string) => {
-        onComelete: (func: (data: unknown) => any) => any;
+        onComplete: (func: (data: unknown) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     History: (token?: string) => {
-        onComelete: (func: (data: unknown) => any) => any;
+        onComplete: (func: (data: unknown) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
 };

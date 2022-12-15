@@ -9,12 +9,12 @@ declare const Employees: {
         locale: string;
         telegramId?: string | undefined;
     }, token?: string) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             id: string;
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     UpdateEmployee: (id: string, body: {
@@ -26,28 +26,28 @@ declare const Employees: {
         locale?: string | undefined;
         telegramId?: string | undefined;
     }, token?: string) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             msg: "UPDATED";
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     DeleteEmployee: (id: string, token?: string) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             msg: "DELETED";
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     GetEmployees: (token?: string) => {
-        onComelete: (func: (data: import("../../../@types/official").Employee[]) => any) => any;
+        onComplete: (func: (data: import("../../../@types/official").Employee[]) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
 };

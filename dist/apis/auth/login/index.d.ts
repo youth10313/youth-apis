@@ -5,12 +5,12 @@ declare const Login: {
         email: string;
         password: string;
     }) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             msg: "RESEND_DATA_WITH_CODE";
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     LoginUserStepTwo: (body: {
@@ -18,7 +18,7 @@ declare const Login: {
         password: string;
         code: string;
     }) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             token: string;
             privateKey: string;
             msg: "LOGGED_IN_SUCCESSFULLY";
@@ -26,36 +26,36 @@ declare const Login: {
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     RenewUserToken: (_private?: string) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             msg: "TOKEN_SENT";
             time: number;
             token: string;
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     LoginOfficial: (body: {
         phrase: string;
         password: string;
     }) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             msg: "TOKEN_CREATED";
             _employee?: Employee | undefined;
             _department: Official;
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     GetSessions: (Authorization?: string) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             _id: string;
             device: {
                 "parser": {
@@ -82,20 +82,20 @@ declare const Login: {
         }[]) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     ResetPassword: {
         StepOne: (body: {
             email: string;
         }) => {
-            onComelete: (func: (data: {
+            onComplete: (func: (data: {
                 msg: "ACCCEPTED";
                 type: 1 | 2;
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: (projects?: string[] | undefined) => void;
+            subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
             abort: () => void;
         };
         StepTwo: (body: {
@@ -103,31 +103,31 @@ declare const Login: {
             password: string;
             code: string;
         }) => {
-            onComelete: (func: (data: {
+            onComplete: (func: (data: {
                 msg: "ACTIVATED";
             }) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
-            subscribe: (projects?: string[] | undefined) => void;
+            subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
             abort: () => void;
         };
     };
     LogoutOffice: (token?: string) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             msg: "LOGGED_OUT";
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     LogoutUser: (_private?: string) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             msg: "LOGGED_OUT";
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
 };

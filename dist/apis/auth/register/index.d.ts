@@ -2,13 +2,13 @@ declare const Register: {
     CheckEmail: (body: {
         email: string;
     }) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             msg: "ACCCEPTED";
             type: 1 | 2;
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     SendForm: (body: {
@@ -17,12 +17,12 @@ declare const Register: {
         email: string;
         nickname: string;
     }) => {
-        onComelete: (func: (data: {
+        onComplete: (func: (data: {
             userId: string;
         }) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        subscribe: (projects?: string[] | undefined) => void;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
 };
