@@ -3,6 +3,15 @@ ahmed alhasan's youth APIs.
 
 we've created simple package for you to use our APIs in your projects easily. but we prefer you to read our [API Documention](https://developers.ahmedalhasan.com/). also do not forget to check [Youth Club](https://ahmedalhasan.club)
 
+if you want to access the API through a proxy, so you can set the proxies in .env file;
+```javascript
+AUTH_API_PROXY="http://url.proxy/"
+DATA_API_PROXY="http://url.proxy/"
+CLOUD_API_PROXY="http://url.proxy/"
+OFFICIAL_API_PROXY="http://url.proxy/"
+```
+
+
 ### How To Use?
 ```javascript
 import YouthServers from "@youth10313/youth-apis"
@@ -17,7 +26,7 @@ Search.onError(err => {
     // handle Errors
 })
 
-Search.onComelete(response => {
+Search.onComplete(response => {
     // do something with response
 })
 
@@ -43,7 +52,7 @@ export const AnsarImamMahdi = () => {
     const api = YouthServers.Data.Feeds.Main.Ansars.fetch(i18next.language);
     api.onChange(setLoading);
     api.onError(setError);
-    api.onComelete(data => {
+    api.onComplete(data => {
         dispatch({ type: "FETCH_ANSAR", payload: data });
     })
 
