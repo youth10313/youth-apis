@@ -1,5 +1,5 @@
 import { Pagination } from "../../../@types/common";
-declare const Core: (q: string, locale: string) => {
+declare const Core: (q: string, locale: string, page: number, perPage: number) => {
     onComplete: (func: (data: Pagination<{
         _id: string;
         title: string;

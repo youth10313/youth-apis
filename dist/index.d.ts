@@ -499,7 +499,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
         };
-        Core: (q: string, locale: string) => {
+        Core: (q: string, locale: string, page: number, perPage: number) => {
             onComplete: (func: (data: import("./@types/common").Pagination<{
                 _id: string;
                 title: string;
