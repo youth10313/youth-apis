@@ -121,7 +121,7 @@ declare const YouthServers: {
                 subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
-            LogoutUser: (_private?: string) => {
+            LogoutUser: (_private?: string, tokenId?: string) => {
                 onComplete: (func: (data: {
                     msg: "LOGGED_OUT";
                 }) => any) => any;

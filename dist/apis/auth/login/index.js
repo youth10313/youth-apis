@@ -17,9 +17,10 @@ var GetSessions = function (Authorization) {
     if (Authorization === void 0) { Authorization = ''; }
     return (0, request_1.YouthRoute)('get', api_1.AUTH_API + 'login', {}, { Authorization: Authorization }, {});
 };
-var LogoutUser = function (_private) {
+var LogoutUser = function (_private, tokenId) {
     if (_private === void 0) { _private = ''; }
-    return (0, request_1.YouthRoute)('delete', api_1.AUTH_API + 'login', {}, { _private: _private }, {});
+    if (tokenId === void 0) { tokenId = ''; }
+    return (0, request_1.YouthRoute)('delete', api_1.AUTH_API + 'login', { tokenId: tokenId }, { _private: _private }, {});
 };
 var LogoutOffice = function (token) {
     if (token === void 0) { token = ''; }

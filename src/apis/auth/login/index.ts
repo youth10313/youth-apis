@@ -94,10 +94,10 @@ const GetSessions = (Authorization: string = '') => YouthRoute<{
 )
 
 
-const LogoutUser = (_private = '') => YouthRoute<{ msg: "LOGGED_OUT" }>(
+const LogoutUser = (_private = '', tokenId = '') => YouthRoute<{ msg: "LOGGED_OUT" }>(
     'delete',
     AUTH_API + 'login',
-    {},
+    { tokenId },
     { _private },
     {}
 )
