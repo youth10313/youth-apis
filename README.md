@@ -3,20 +3,13 @@ ahmed alhasan's youth APIs.
 
 we've created simple package for you to use our APIs in your projects easily. but we prefer you to read our [API Documention](https://developers.ahmedalhasan.com/). also do not forget to check [Youth Club](https://ahmedalhasan.club)
 
-if you want to access the API through a proxy, so you can set the proxies in .env file;
-```javascript
-AUTH_API_PROXY="http://url.proxy/"
-DATA_API_PROXY="http://url.proxy/"
-CLOUD_API_PROXY="http://url.proxy/"
-OFFICIAL_API_PROXY="http://url.proxy/"
-```
-
 
 ### How To Use?
 ```javascript
-import YouthServers from "@youth10313/youth-apis"
+import YouthServers from "@youth10313/youth-apis";
 
-const Search = YouthServers.Data.Core("Ahmed", "en");
+declare page;
+const Search = YouthServers.Data.Core("Ahmed", "en", page);
 
 Search.onChange(state => {
     // loading state change
@@ -76,6 +69,52 @@ export const AnsarImamMahdi = () => {
     </div>
 } 
 
+```
+
+when you want to fetch data from an api that has pagination or any kind of filters (read: [API Documention](https://developers.ahmedalhasan.com/)) you can pass the queries in two ways.
+ 
+ 1. pass them through original args:
+ ```javascript
+YouthServers.Data.Feeds.Blog.posts.fetch(
+    locale: string,
+    querystring: any = {},
+    Authorization = '',
+    page?: number,
+    perPage?: number,
+    search?: string,
+    sort_by?: string,
+    sort_order?: 'ASC' | 'DESC',
+    date_start?: Date,
+    date_end?: Date,
+    category?: string | string[]
+)
+```
+
+2. pass them through querystring:
+ ```javascript
+YouthServers.Data.Feeds.Blog.posts.fetch(
+    "",
+    querystring: any = {
+        locale: "fa",
+        page: 1,
+        perPage: 100,
+        ...
+    },
+    Authorization = ''
+)
+```
+
+Also you can mix these two ways.
+
+
+## HTTP Proxy
+
+if you want to access the API through a proxy, so you can set the proxies in .env file;
+```javascript
+REACT_APP_AUTH_API_PROXY="http://url.proxy/"
+REACT_APP_DATA_API_PROXY="http://url.proxy/"
+REACT_APP_CLOUD_API_PROXY="http://url.proxy/"
+REACT_APP_OFFICIAL_API_PROXY="http://url.proxy/"
 ```
 
 contact me at Telegram if you have any questions: [Youth10313](https://t.me/youth10313)
