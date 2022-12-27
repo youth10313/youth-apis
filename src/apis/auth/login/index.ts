@@ -23,7 +23,7 @@ const LoginUserStepTwo = (body: { email: string, password: string, code: string 
     body
 )
 
-const RenewUserToken = (_private: string = '') => YouthRoute<{
+const RenewUserToken = (Private: string = '') => YouthRoute<{
     "msg": "TOKEN_SENT",
     "time": number,
     "token": string
@@ -31,7 +31,7 @@ const RenewUserToken = (_private: string = '') => YouthRoute<{
     'post',
     AUTH_API + 'login',
     {},
-    { private: _private },
+    { private: Private },
     {}
 )
 
@@ -94,11 +94,11 @@ const GetSessions = (Authorization: string = '') => YouthRoute<{
 )
 
 
-const LogoutUser = (_private = '', tokenId = '') => YouthRoute<{ msg: "LOGGED_OUT" }>(
+const LogoutUser = (Private = '', tokenId = '') => YouthRoute<{ msg: "LOGGED_OUT" }>(
     'delete',
     AUTH_API + 'login',
     { tokenId },
-    { _private },
+    { Private },
     {}
 )
 const LogoutOffice = (token = '') => YouthRoute<{ msg: "LOGGED_OUT" }>(

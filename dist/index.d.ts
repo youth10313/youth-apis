@@ -29,7 +29,7 @@ declare const YouthServers: {
                 subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
-            RenewUserToken: (_private?: string) => {
+            RenewUserToken: (Private?: string) => {
                 onComplete: (func: (data: {
                     msg: "TOKEN_SENT";
                     time: number;
@@ -121,7 +121,7 @@ declare const YouthServers: {
                 subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
-            LogoutUser: (_private?: string, tokenId?: string) => {
+            LogoutUser: (Private?: string, tokenId?: string) => {
                 onComplete: (func: (data: {
                     msg: "LOGGED_OUT";
                 }) => any) => any;
