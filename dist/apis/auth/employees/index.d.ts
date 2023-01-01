@@ -9,11 +9,14 @@ declare const Employees: {
         locale: string;
         telegramId?: string | undefined;
     }, token?: string) => {
-        onComplete: (func: (data: {
+        onComplete: (func: <A = {
             id: string;
-        }) => any) => any;
+        }>(data: A) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            id: string;
+        }) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
@@ -26,27 +29,34 @@ declare const Employees: {
         locale?: string | undefined;
         telegramId?: string | undefined;
     }, token?: string) => {
-        onComplete: (func: (data: {
+        onComplete: (func: <A_1 = {
             msg: "UPDATED";
-        }) => any) => any;
+        }>(data: A_1) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            msg: "UPDATED";
+        }) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     DeleteEmployee: (id: string, token?: string) => {
-        onComplete: (func: (data: {
+        onComplete: (func: <A_2 = {
             msg: "DELETED";
-        }) => any) => any;
+        }>(data: A_2) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            msg: "DELETED";
+        }) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     GetEmployees: (token?: string) => {
-        onComplete: (func: (data: import("../../../@types/official").Employee[]) => any) => any;
+        onComplete: (func: <A_3 = import("../../../@types/official").Employee[]>(data: A_3) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: import("../../../@types/official").Employee[]) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };

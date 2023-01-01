@@ -29,12 +29,13 @@ export const YouthRoute = <T>(
     body: any,
     timeout = 1000 * 13) => {
     const controller = new AbortController();
-    let complete: (data: T) => any = res => res
-    let error: (err: any) => any = err => err
-    let change: (state: boolean) => any = state => state
+    let complete: (data: T) => any = res => res;
+    let error: (err: any) => any = err => err;
+    let change: (state: boolean) => any = state => state;
+    let convert: (response: T) => any = response => response;
     let abort = () => controller.abort()
     const obj = {
-        onComplete: (func: (data: T) => any) => {
+        onComplete: (func: <A = T>(data: A) => any) => {
             complete = func;
             return obj;
         },
@@ -44,6 +45,10 @@ export const YouthRoute = <T>(
         },
         onChange: (func: (state: boolean) => any) => {
             change = func;
+            return obj
+        },
+        Convert: (func: (data: T) => any) => {
+            convert = func;
             return obj
         },
         subscribe: (projects?: string[], args?: Args) => {
@@ -64,7 +69,7 @@ export const YouthRoute = <T>(
                 params['project'] = queryType;
             }
             YouthAPI<T>(method, url, params, headers, body, change, controller, timeout)
-                .then(res => complete(res))
+                .then(res => complete(convert(res)))
                 .catch(err => error(err))
         },
         abort

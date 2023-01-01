@@ -1,24 +1,29 @@
 declare const Blazer: {
     Send: (departments: string[], message: string, token?: string) => {
-        onComplete: (func: (data: {
+        onComplete: (func: <A = {
             msg: string;
-        }) => any) => any;
+        }>(data: A) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            msg: string;
+        }) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     Cancel: (id: string, token?: string) => {
-        onComplete: (func: (data: unknown) => any) => any;
+        onComplete: (func: <A_1 = unknown>(data: A_1) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: unknown) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     History: (token?: string) => {
-        onComplete: (func: (data: unknown) => any) => any;
+        onComplete: (func: <A_1 = unknown>(data: A_1) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: unknown) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };

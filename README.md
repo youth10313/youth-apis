@@ -28,6 +28,61 @@ Search.abort(); // this will abort the request.
 
 ```
 
+### Advance usage
+we've provided some functions that helps you to fetch data easier.
+#### 1. Convert data with Convert function before onComplete Event.
+#### 2. You can briefing the data that you fetching from the server to make request size smaller.
+#### 3. You can pass new params into subscribe function. any thing will be override.
+```javascript
+const posts = YouthServers.Data.Feeds.Blog.posts.fetch("en", { category: '__categoryId' }, '__AuthenticationToken', 1, 13, '');
+
+posts.onError(error => {
+    // any handling error code
+    alert('We have an error.' + error.response?.status ? `Error Code is ${error.response.status}` : `No Internet Connection`);
+})
+
+posts.onChange(state => {
+    const spinner = document.getElementById('spinner');
+    spinner.style.display = state ? 'block' : 'none';
+})
+
+// here you can convert the whole data fetched from server.
+posts.Convert(res => {
+    res.items = res.items.map(item => `
+        <h4>${item.title}</h4>
+        <p>${item.description}</p>
+        <a href='/path/to/${item.latinTitle}'>Read More</a>
+    `);
+    return res;
+})
+
+// now this event will pass converted data to your function.
+posts.onComplete(res => {
+    const content = document.getElementById('content');
+    content?.innerHTML = '';
+    res.items.forEach(item => content?.innerHTML += item)
+})
+
+function startRequest(category) {
+    posts.subscribe(
+        ['title', 'latinTitle', 'description'], // the server response will only contains these fields.
+        { params: { category } } // you can override headers, params and any argument you passed in fetch function
+        // the cid is the id you passed in fetchOne and id is the Id you want to replace.
+        )
+}
+
+
+const cancelButton = document.getElementById('cancel-button');
+cancelButton?.addEventListener('click', posts.abort) // so the user can cancel the fetching request.
+
+const refreshButton = document.getElementById('refresh-button');
+refreshButton?.addEventListener('click', () => startRequest('__selected_category_id__'))
+
+
+document.addEventListener('load', () => startRequest(''))
+
+```
+
 it is so easy to use. for example if you working on an react project, your component sould be liek this:
 
 ```jsx

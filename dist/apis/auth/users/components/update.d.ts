@@ -15,11 +15,14 @@ declare const UpdateUser: (id: string, body: {
     twitter?: string;
     instagram?: string;
 }, Authorization?: string) => {
-    onComplete: (func: (data: {
+    onComplete: (func: <A = {
         msg: "UPDATED";
-    }) => any) => any;
+    }>(data: A) => any) => any;
     onError: (func: (err: any) => any) => any;
     onChange: (func: (state: boolean) => any) => any;
+    Convert: (func: (data: {
+        msg: "UPDATED";
+    }) => any) => any;
     subscribe: (projects?: string[] | undefined, args?: import("../../../../@types/subscribe").Args | undefined) => void;
     abort: () => void;
 };

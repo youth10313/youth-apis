@@ -26,6 +26,7 @@ var YouthRoute = function (method, url, params, headers, body, timeout) {
     var complete = function (res) { return res; };
     var error = function (err) { return err; };
     var change = function (state) { return state; };
+    var convert = function (response) { return response; };
     var abort = function () { return controller.abort(); };
     var obj = {
         onComplete: function (func) {
@@ -38,6 +39,10 @@ var YouthRoute = function (method, url, params, headers, body, timeout) {
         },
         onChange: function (func) {
             change = func;
+            return obj;
+        },
+        Convert: function (func) {
+            convert = func;
             return obj;
         },
         subscribe: function (projects, args) {
@@ -59,7 +64,7 @@ var YouthRoute = function (method, url, params, headers, body, timeout) {
                 params['project'] = queryType_1;
             }
             (0, exports.YouthAPI)(method, url, params, headers, body, change, controller, timeout)
-                .then(function (res) { return complete(res); })
+                .then(function (res) { return complete(convert(res)); })
                 .catch(function (err) { return error(err); });
         },
         abort: abort

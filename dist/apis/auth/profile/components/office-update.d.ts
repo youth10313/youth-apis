@@ -3,11 +3,14 @@ declare const _default: {
         password: string;
         newpassword: string;
     }, token?: string) => {
-        onComplete: (func: (data: {
+        onComplete: (func: <A = {
             msg: "UPDATED";
-        }) => any) => any;
+        }>(data: A) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            msg: "UPDATED";
+        }) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
@@ -17,11 +20,14 @@ declare const _default: {
         telegramId?: string | undefined;
         locale?: string | undefined;
     }, token?: string) => {
-        onComplete: (func: (data: {
+        onComplete: (func: <A_1 = {
             msg: "UPDATED";
-        }) => any) => any;
+        }>(data: A_1) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            msg: "UPDATED";
+        }) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };

@@ -1,8 +1,9 @@
 declare const Profile: {
     MyProfile: (Authorization?: string) => {
-        onComplete: (func: (data: import("../../../@types/user").User) => any) => any;
+        onComplete: (func: <A = import("../../../@types/user").User>(data: A) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: import("../../../@types/user").User) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
@@ -21,11 +22,14 @@ declare const Profile: {
             twitter?: string | undefined;
             instagram?: string | undefined;
         }, Authorization?: string) => {
-            onComplete: (func: (data: {
+            onComplete: (func: <A_1 = {
                 msg: "UPDATED";
-            }) => any) => any;
+            }>(data: A_1) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
+            Convert: (func: (data: {
+                msg: "UPDATED";
+            }) => any) => any;
             subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
             abort: () => void;
         };
@@ -33,11 +37,14 @@ declare const Profile: {
             password: string;
             newpassword: string;
         }, Authorization?: string) => {
-            onComplete: (func: (data: {
+            onComplete: (func: <A_2 = {
                 msg: "UPDATED";
-            }) => any) => any;
+            }>(data: A_2) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
+            Convert: (func: (data: {
+                msg: "UPDATED";
+            }) => any) => any;
             subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
             abort: () => void;
         };
@@ -47,11 +54,14 @@ declare const Profile: {
             password: string;
             newpassword: string;
         }, token?: string) => {
-            onComplete: (func: (data: {
+            onComplete: (func: <A_3 = {
                 msg: "UPDATED";
-            }) => any) => any;
+            }>(data: A_3) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
+            Convert: (func: (data: {
+                msg: "UPDATED";
+            }) => any) => any;
             subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
             abort: () => void;
         };
@@ -61,11 +71,14 @@ declare const Profile: {
             telegramId?: string | undefined;
             locale?: string | undefined;
         }, token?: string) => {
-            onComplete: (func: (data: {
+            onComplete: (func: <A_4 = {
                 msg: "UPDATED";
-            }) => any) => any;
+            }>(data: A_4) => any) => any;
             onError: (func: (err: any) => any) => any;
             onChange: (func: (state: boolean) => any) => any;
+            Convert: (func: (data: {
+                msg: "UPDATED";
+            }) => any) => any;
             subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
             abort: () => void;
         };

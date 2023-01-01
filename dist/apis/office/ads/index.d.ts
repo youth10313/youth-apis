@@ -1,52 +1,66 @@
 import { Ad, AdBody } from "../../../@types/ads";
 declare const Ads: {
     CreateUserAd: (body: AdBody, Authorization?: string) => {
-        onComplete: (func: (data: {
+        onComplete: (func: <A = {
             id: string;
-        }) => any) => any;
+        }>(data: A) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            id: string;
+        }) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     UpdateUserAd: (body: any, Authorization?: string) => {
-        onComplete: (func: (data: {
+        onComplete: (func: <A_1 = {
             id: string;
-        }) => any) => any;
+        }>(data: A_1) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            id: string;
+        }) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     SignAds: (token?: string) => {
-        onComplete: (func: (data: {
+        onComplete: (func: <A_2 = {
             id: string;
-        }) => any) => any;
+        }>(data: A_2) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            id: string;
+        }) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     RemoveAd: (id: string, token?: string, Authorization?: string) => {
-        onComplete: (func: (data: {
+        onComplete: (func: <A_3 = {
             msg: "DELETED";
-        }) => any) => any;
+        }>(data: A_3) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            msg: "DELETED";
+        }) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     GetDepartmentAds: (from: Date | undefined, to: Date | undefined, signed: boolean, count: boolean, token?: string) => {
-        onComplete: (func: (data: Ad[]) => any) => any;
+        onComplete: (func: <A_4 = Ad[]>(data: A_4) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: Ad[]) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
     GetUserAds: (from: Date | undefined, to: Date | undefined, signed: boolean, count: boolean, Authorization?: string) => {
-        onComplete: (func: (data: Ad[]) => any) => any;
+        onComplete: (func: <A_4 = Ad[]>(data: A_4) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: Ad[]) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
