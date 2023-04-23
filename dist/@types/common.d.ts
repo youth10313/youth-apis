@@ -22,7 +22,7 @@ export interface Pagination<T> {
     pages: number,
     page: number,
     perPage: number,
-    Items: T[]
+    items: T[]
 }
 
 export interface I18n {

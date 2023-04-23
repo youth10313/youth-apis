@@ -1,5 +1,5 @@
 declare const Blazer: {
-    Send: (departments: string[], message: string, token?: string) => {
+    Send: (departments: string[], date: string, message: string, token?: string) => {
         onComplete: (func: <A = {
             msg: string;
         }>(data: A) => any) => any;

@@ -3368,7 +3368,7 @@ declare const YouthServers: {
             };
         };
         Blazer: {
-            Send: (departments: string[], message: string, token?: string) => {
+            Send: (departments: string[], date: string, message: string, token?: string) => {
                 onComplete: (func: <A_148 = {
                     msg: string;
                 }>(data: A_148) => any) => any;
