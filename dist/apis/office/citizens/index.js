@@ -12,11 +12,11 @@ var DeleteLink = function (token) {
 };
 var Join = function (linkHash, Authorization) {
     if (Authorization === void 0) { Authorization = ''; }
-    return (0, request_1.YouthRoute)('post', "".concat(api_1.OFFICIAL_API, "citizens/join/").concat(linkHash), {}, { Authorization: Authorization }, {});
+    return (0, request_1.YouthRoute)('get', "".concat(api_1.OFFICIAL_API, "citizens/join/").concat(linkHash), {}, { Authorization: Authorization }, {});
 };
 var Left = function (id, Authorization) {
     if (Authorization === void 0) { Authorization = ''; }
-    return (0, request_1.YouthRoute)('post', "".concat(api_1.OFFICIAL_API, "citizens/join/").concat(id), {}, { Authorization: Authorization }, {});
+    return (0, request_1.YouthRoute)('delete', "".concat(api_1.OFFICIAL_API, "citizens/join/").concat(id), {}, { Authorization: Authorization }, {});
 };
 var ApproveCitizen = function (userId, token) {
     if (token === void 0) { token = ''; }
