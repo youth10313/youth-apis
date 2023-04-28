@@ -8,7 +8,7 @@ var CreateProject = function (body, token) {
 };
 var UpdateProject = function (id, body, token) {
     if (token === void 0) { token = ''; }
-    return (0, request_1.YouthRoute)('post', "".concat(api_1.OFFICIAL_API, "reports/").concat(id), {}, { token: token }, body);
+    return (0, request_1.YouthRoute)('patch', "".concat(api_1.OFFICIAL_API, "reports/").concat(id), {}, { token: token }, body);
 };
 var RemoveProject = function (id, token) {
     if (token === void 0) { token = ''; }
