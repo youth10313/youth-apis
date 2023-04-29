@@ -8,7 +8,7 @@ const UpdateProfile = (body: {
     locale?: string
 }, token = '') => YouthRoute<{ msg: "UPDATED" }>(
     'post',
-    AUTH_API + 'departments/profile',
+    AUTH_API + 'department/profile',
     {},
     { token },
     body
@@ -18,7 +18,7 @@ const UpdatePassword = (body: {
     newpassword: string
 }, token = '') => YouthRoute<{ msg: "UPDATED" }>(
     'post',
-    AUTH_API + 'departments/profile',
+    AUTH_API + 'department/profile',
     {},
     { token },
     body
