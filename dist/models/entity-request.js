@@ -21,11 +21,11 @@ var EntityRequest = /** @class */ (function () {
         var _this = this;
         var create = function (body, locale, Authorization) {
             if (Authorization === void 0) { Authorization = ''; }
-            return (0, request_1.YouthRoute)('post', _this.url, {}, { Authorization: Authorization, locale: locale }, body, 1000 * 60 * 5);
+            return (0, request_1.YouthRoute)('post', _this.url, {}, { Authorization: Authorization, locale: locale }, body, 1000 * 60 * 13);
         };
         var update = function (id, body, locale, Authorization) {
             if (Authorization === void 0) { Authorization = ''; }
-            return (0, request_1.YouthRoute)('patch', "".concat(_this.url, "/").concat(id), {}, { Authorization: Authorization, locale: locale }, body, 1000 * 60 * 5);
+            return (0, request_1.YouthRoute)('patch', "".concat(_this.url, "/").concat(id), {}, { Authorization: Authorization, locale: locale }, body, 1000 * 60 * 13);
         };
         var remove = function (id, locale, Authorization) {
             if (Authorization === void 0) { Authorization = ''; }
@@ -67,11 +67,11 @@ var EntityRequest = /** @class */ (function () {
         var _this = this;
         var create = function (body, locale, Authorization) {
             if (Authorization === void 0) { Authorization = ''; }
-            return (0, request_1.YouthRoute)('post', "".concat(_this.url, "-category"), {}, { Authorization: Authorization, locale: locale }, body, 1000 * 60 * 5);
+            return (0, request_1.YouthRoute)('post', "".concat(_this.url, "-category"), {}, { Authorization: Authorization, locale: locale }, body, 1000 * 60 * 13);
         };
         var update = function (id, body, locale, Authorization) {
             if (Authorization === void 0) { Authorization = ''; }
-            return (0, request_1.YouthRoute)('patch', "".concat(_this.url, "-category/").concat(id), {}, { Authorization: Authorization, locale: locale }, body, 1000 * 60 * 5);
+            return (0, request_1.YouthRoute)('patch', "".concat(_this.url, "-category/").concat(id), {}, { Authorization: Authorization, locale: locale }, body, 1000 * 60 * 13);
         };
         var remove = function (id, locale, Authorization) {
             if (Authorization === void 0) { Authorization = ''; }

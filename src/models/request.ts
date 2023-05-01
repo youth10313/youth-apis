@@ -9,7 +9,7 @@ export const YouthAPI = <T>(
     body: any,
     onChange: (state: boolean) => void | any,
     controller: AbortController,
-    timeout = 1000 * 60) => new Promise<T>((resolve, reject) => {
+    timeout = 1000 * 60 * 10) => new Promise<T>((resolve, reject) => {
         onChange(true)
         const ax = method === 'get' || method === 'delete' ? axios[method](url, { headers, params, timeout, signal: controller.signal }) : axios[method](url, body, { headers, params, timeout, signal: controller.signal });
         ax.then(res => {
@@ -27,7 +27,7 @@ export const YouthRoute = <T>(
     params: any,
     headers: any,
     body: any,
-    timeout = 1000 * 60) => {
+    timeout = 1000 * 60 * 10) => {
     const controller = new AbortController();
     let complete: (data: T) => any = res => res;
     let error: (err: any) => any = err => err;
