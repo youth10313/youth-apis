@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.YouthRoute = exports.YouthAPI = void 0;
 var axios_1 = __importDefault(require("axios"));
 var YouthAPI = function (method, url, params, headers, body, onChange, controller, timeout) {
-    if (timeout === void 0) { timeout = 1000 * 13; }
+    if (timeout === void 0) { timeout = 1000 * 60; }
     return new Promise(function (resolve, reject) {
         onChange(true);
         var ax = method === 'get' || method === 'delete' ? axios_1.default[method](url, { headers: headers, params: params, timeout: timeout, signal: controller.signal }) : axios_1.default[method](url, body, { headers: headers, params: params, timeout: timeout, signal: controller.signal });
@@ -21,7 +21,7 @@ var YouthAPI = function (method, url, params, headers, body, onChange, controlle
 };
 exports.YouthAPI = YouthAPI;
 var YouthRoute = function (method, url, params, headers, body, timeout) {
-    if (timeout === void 0) { timeout = 1000 * 13; }
+    if (timeout === void 0) { timeout = 1000 * 60; }
     var controller = new AbortController();
     var complete = function (res) { return res; };
     var error = function (err) { return err; };
