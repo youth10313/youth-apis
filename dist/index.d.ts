@@ -3472,6 +3472,14 @@ declare const YouthServers: {
                 subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
+            JoinByAdmin: (linkHash: string, Authorization?: string) => {
+                onComplete: (func: <A_31 = unknown>(data: A_31) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: unknown) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
         };
         Communication: {
             Send: (body: {

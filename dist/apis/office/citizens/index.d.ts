@@ -74,5 +74,13 @@ declare const Citizens: {
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
+    JoinByAdmin: (linkHash: string, Authorization?: string) => {
+        onComplete: (func: <A_2 = unknown>(data: A_2) => any) => any;
+        onError: (func: (err: any) => any) => any;
+        onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: unknown) => any) => any;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
+        abort: () => void;
+    };
 };
 export default Citizens;
