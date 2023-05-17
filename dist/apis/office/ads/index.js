@@ -6,6 +6,14 @@ var CreateUserAd = function (body, Authorization) {
     if (Authorization === void 0) { Authorization = ''; }
     return (0, request_1.YouthRoute)('post', "".concat(api_1.OFFICIAL_API, "ads"), {}, { Authorization: Authorization }, body);
 };
+var SendUserAdReport = function (id, body, Authorization) {
+    if (Authorization === void 0) { Authorization = ''; }
+    return (0, request_1.YouthRoute)('post', "".concat(api_1.OFFICIAL_API, "ads/").concat(id), {}, { Authorization: Authorization }, body);
+};
+var DeleteUserAdReport = function (id, Authorization) {
+    if (Authorization === void 0) { Authorization = ''; }
+    return (0, request_1.YouthRoute)('delete', "".concat(api_1.OFFICIAL_API, "ads/").concat(id), {}, { Authorization: Authorization }, {});
+};
 var UpdateUserAd = function (body, Authorization) {
     if (Authorization === void 0) { Authorization = ''; }
     return (0, request_1.YouthRoute)('patch', "".concat(api_1.OFFICIAL_API, "ads"), {}, { Authorization: Authorization }, body);
@@ -25,6 +33,14 @@ var GetUserAds = function (from, to, signed, count, Authorization) {
         from: typeof from === typeof Date ? from === null || from === void 0 ? void 0 : from.toISOString() : '', to: typeof to === typeof Date ? to === null || to === void 0 ? void 0 : to.toISOString() : '', signed: signed ? signed : '', count: count ? count : ''
     }, { Authorization: Authorization }, {});
 };
+var GetUserAdReports = function (id, Authorization) {
+    if (Authorization === void 0) { Authorization = ''; }
+    return (0, request_1.YouthRoute)('get', "".concat(api_1.OFFICIAL_API, "ads/").concat(id), {}, { Authorization: Authorization }, {});
+};
+var GetDepartmentUserAdReports = function (id, token) {
+    if (token === void 0) { token = ''; }
+    return (0, request_1.YouthRoute)('get', "".concat(api_1.OFFICIAL_API, "ads/").concat(id), {}, { token: token }, {});
+};
 var GetDepartmentAds = function (from, to, signed, count, token) {
     if (token === void 0) { token = ''; }
     return (0, request_1.YouthRoute)('get', "".concat(api_1.OFFICIAL_API, "ads"), {
@@ -37,6 +53,10 @@ var Ads = {
     SignAds: SignAds,
     RemoveAd: RemoveAd,
     GetDepartmentAds: GetDepartmentAds,
-    GetUserAds: GetUserAds
+    GetUserAds: GetUserAds,
+    SendUserAdReport: SendUserAdReport,
+    DeleteUserAdReport: DeleteUserAdReport,
+    GetUserAdReports: GetUserAdReports,
+    GetDepartmentUserAdReports: GetDepartmentUserAdReports
 };
 exports.default = Ads;

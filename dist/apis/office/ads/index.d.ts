@@ -64,5 +64,47 @@ declare const Ads: {
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
+    SendUserAdReport: (id: string, body: {
+        description: string;
+    }, Authorization?: string) => {
+        onComplete: (func: <A_5 = {
+            id: string;
+        }>(data: A_5) => any) => any;
+        onError: (func: (err: any) => any) => any;
+        onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            id: string;
+        }) => any) => any;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
+        abort: () => void;
+    };
+    DeleteUserAdReport: (id: string, Authorization?: string) => {
+        onComplete: (func: <A_6 = {
+            id: string;
+        }>(data: A_6) => any) => any;
+        onError: (func: (err: any) => any) => any;
+        onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            id: string;
+        }) => any) => any;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
+        abort: () => void;
+    };
+    GetUserAdReports: (id: string, Authorization?: string) => {
+        onComplete: (func: <A_4 = Ad[]>(data: A_4) => any) => any;
+        onError: (func: (err: any) => any) => any;
+        onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: Ad[]) => any) => any;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
+        abort: () => void;
+    };
+    GetDepartmentUserAdReports: (id: string, token?: string) => {
+        onComplete: (func: <A_4 = Ad[]>(data: A_4) => any) => any;
+        onError: (func: (err: any) => any) => any;
+        onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: Ad[]) => any) => any;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
+        abort: () => void;
+    };
 };
 export default Ads;
