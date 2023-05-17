@@ -12,7 +12,7 @@ var SendUserAdReport = function (id, body, Authorization) {
 };
 var DeleteUserAdReport = function (id, Authorization) {
     if (Authorization === void 0) { Authorization = ''; }
-    return (0, request_1.YouthRoute)('delete', "".concat(api_1.OFFICIAL_API, "ads/").concat(id), {}, { Authorization: Authorization }, {});
+    return (0, request_1.YouthRoute)('delete', "".concat(api_1.OFFICIAL_API, "ads/").concat(id, "/report"), {}, { Authorization: Authorization }, {});
 };
 var UpdateUserAd = function (body, Authorization) {
     if (Authorization === void 0) { Authorization = ''; }
