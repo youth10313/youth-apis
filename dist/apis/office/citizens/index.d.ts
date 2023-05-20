@@ -82,5 +82,17 @@ declare const Citizens: {
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
+    Share: (id: string, body: string[], token?: string) => {
+        onComplete: (func: <A_4 = {
+            msg: string;
+        }>(data: A_4) => any) => any;
+        onError: (func: (err: any) => any) => any;
+        onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            msg: string;
+        }) => any) => any;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
+        abort: () => void;
+    };
 };
 export default Citizens;

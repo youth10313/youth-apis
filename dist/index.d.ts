@@ -3522,6 +3522,18 @@ declare const YouthServers: {
                 subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
+            Share: (id: string, body: string[], token?: string) => {
+                onComplete: (func: <A_154 = {
+                    msg: string;
+                }>(data: A_154) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: {
+                    msg: string;
+                }) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
         };
         Communication: {
             Send: (body: {
@@ -3529,9 +3541,9 @@ declare const YouthServers: {
                 receiver: string;
                 content: string;
             }, token?: string) => {
-                onComplete: (func: <A_154 = {
+                onComplete: (func: <A_155 = {
                     id: string;
-                }>(data: A_154) => any) => any;
+                }>(data: A_155) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3541,9 +3553,9 @@ declare const YouthServers: {
                 abort: () => void;
             };
             Remove: (id: string, token?: string) => {
-                onComplete: (func: <A_155 = {
+                onComplete: (func: <A_156 = {
                     msg: string;
-                }>(data: A_155) => any) => any;
+                }>(data: A_156) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3553,7 +3565,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             Mails: (box: "inbox" | "outbox", token?: string) => {
-                onComplete: (func: <A_156 = import("./@types/common").Pagination<import("./@types/letter").Letter>>(data: A_156) => any) => any;
+                onComplete: (func: <A_157 = import("./@types/common").Pagination<import("./@types/letter").Letter>>(data: A_157) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/common").Pagination<import("./@types/letter").Letter>) => any) => any;
@@ -3561,7 +3573,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             Mail: (id: string, box: "inbox" | "outbox", token?: string) => {
-                onComplete: (func: <A_157 = import("./@types/letter").Letter>(data: A_157) => any) => any;
+                onComplete: (func: <A_158 = import("./@types/letter").Letter>(data: A_158) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/letter").Letter) => any) => any;
@@ -3576,9 +3588,9 @@ declare const YouthServers: {
                 department: string;
                 because?: string | undefined;
             }, Authorization?: string) => {
-                onComplete: (func: <A_158 = {
+                onComplete: (func: <A_159 = {
                     id: string;
-                }>(data: A_158) => any) => any;
+                }>(data: A_159) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3588,9 +3600,9 @@ declare const YouthServers: {
                 abort: () => void;
             };
             Remove: (id: string, token?: string) => {
-                onComplete: (func: <A_159 = {
+                onComplete: (func: <A_160 = {
                     msg: string;
-                }>(data: A_159) => any) => any;
+                }>(data: A_160) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3600,7 +3612,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetDepartmentComplaint: (id: string, token?: string) => {
-                onComplete: (func: <A_160 = import("./@types/complaint").Complaint>(data: A_160) => any) => any;
+                onComplete: (func: <A_161 = import("./@types/complaint").Complaint>(data: A_161) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/complaint").Complaint) => any) => any;
@@ -3608,7 +3620,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetUserComplaint: (id: string, Authorization?: string) => {
-                onComplete: (func: <A_160 = import("./@types/complaint").Complaint>(data: A_160) => any) => any;
+                onComplete: (func: <A_161 = import("./@types/complaint").Complaint>(data: A_161) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/complaint").Complaint) => any) => any;
@@ -3616,7 +3628,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetDepartmentComplaints: (keyword?: string, token?: string) => {
-                onComplete: (func: <A_160 = import("./@types/complaint").Complaint>(data: A_160) => any) => any;
+                onComplete: (func: <A_161 = import("./@types/complaint").Complaint>(data: A_161) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/complaint").Complaint) => any) => any;
@@ -3624,7 +3636,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetUserComplaints: (keyword?: string, Authorization?: string) => {
-                onComplete: (func: <A_160 = import("./@types/complaint").Complaint>(data: A_160) => any) => any;
+                onComplete: (func: <A_161 = import("./@types/complaint").Complaint>(data: A_161) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/complaint").Complaint) => any) => any;
@@ -3640,9 +3652,9 @@ declare const YouthServers: {
                 members: string[];
                 questions: [];
             }, token?: string) => {
-                onComplete: (func: <A_161 = {
+                onComplete: (func: <A_162 = {
                     id: string;
-                }>(data: A_161) => any) => any;
+                }>(data: A_162) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3658,18 +3670,6 @@ declare const YouthServers: {
                 members: string[];
                 questions: [];
             }, token?: string) => {
-                onComplete: (func: <A_162 = {
-                    msg: string;
-                }>(data: A_162) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: {
-                    msg: string;
-                }) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-            RemoveProject: (id: string, token?: string) => {
                 onComplete: (func: <A_163 = {
                     msg: string;
                 }>(data: A_163) => any) => any;
@@ -3681,8 +3681,20 @@ declare const YouthServers: {
                 subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
+            RemoveProject: (id: string, token?: string) => {
+                onComplete: (func: <A_164 = {
+                    msg: string;
+                }>(data: A_164) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: {
+                    msg: string;
+                }) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
             GetProjects: (token?: string) => {
-                onComplete: (func: <A_164 = import("./@types/report").ReportProject[]>(data: A_164) => any) => any;
+                onComplete: (func: <A_165 = import("./@types/report").ReportProject[]>(data: A_165) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/report").ReportProject[]) => any) => any;
@@ -3690,7 +3702,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetUserProjects: (Authorization?: string) => {
-                onComplete: (func: <A_164 = import("./@types/report").ReportProject[]>(data: A_164) => any) => any;
+                onComplete: (func: <A_165 = import("./@types/report").ReportProject[]>(data: A_165) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/report").ReportProject[]) => any) => any;
@@ -3698,9 +3710,9 @@ declare const YouthServers: {
                 abort: () => void;
             };
             SendUserReport: (projectId: string, id: string, answers?: string[] | undefined, Authorization?: string) => {
-                onComplete: (func: <A_165 = {
+                onComplete: (func: <A_166 = {
                     msg: string;
-                }>(data: A_165) => any) => any;
+                }>(data: A_166) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3710,7 +3722,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetProjectReports: (id: string, token?: string) => {
-                onComplete: (func: <A_166 = import("./@types/report").Report[]>(data: A_166) => any) => any;
+                onComplete: (func: <A_167 = import("./@types/report").Report[]>(data: A_167) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/report").Report[]) => any) => any;
@@ -3718,7 +3730,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetUserProjectReports: (id: string, Authorization?: string) => {
-                onComplete: (func: <A_166 = import("./@types/report").Report[]>(data: A_166) => any) => any;
+                onComplete: (func: <A_167 = import("./@types/report").Report[]>(data: A_167) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/report").Report[]) => any) => any;
