@@ -2,6 +2,24 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var api_1 = require("../../../constant/api");
 var request_1 = require("../../../models/request");
+var Job = function (fetch, Authorization) {
+    if (Authorization === void 0) { Authorization = ''; }
+    return (0, request_1.YouthRoute)('post', "".concat(api_1.OFFICIAL_API, "ads/job"), { fetch: fetch }, { Authorization: Authorization }, {});
+};
+var UploadAttachment = function (id, body, Authorization) {
+    if (Authorization === void 0) { Authorization = ''; }
+    return (0, request_1.YouthRoute)('post', "".concat(api_1.OFFICIAL_API, "ads/").concat(id, "/attachments"), {}, { Authorization: Authorization }, body);
+};
+var FetchAttachments = function (id, Authorization, token) {
+    if (Authorization === void 0) { Authorization = ''; }
+    if (token === void 0) { token = ''; }
+    return (0, request_1.YouthRoute)('get', "".concat(api_1.OFFICIAL_API, "ads/").concat(id, "/attachments"), {}, { Authorization: Authorization, token: token }, {});
+};
+var FetchAttachment = function (id, file, Authorization, token) {
+    if (Authorization === void 0) { Authorization = ''; }
+    if (token === void 0) { token = ''; }
+    return (0, request_1.YouthRoute)('get', "".concat(api_1.OFFICIAL_API, "ads/").concat(id, "/attachments/").concat(file), {}, { Authorization: Authorization, token: token }, {});
+};
 var CreateUserAd = function (body, Authorization) {
     if (Authorization === void 0) { Authorization = ''; }
     return (0, request_1.YouthRoute)('post', "".concat(api_1.OFFICIAL_API, "ads"), {}, { Authorization: Authorization }, body);
@@ -14,9 +32,9 @@ var DeleteUserAdReport = function (id, Authorization) {
     if (Authorization === void 0) { Authorization = ''; }
     return (0, request_1.YouthRoute)('delete', "".concat(api_1.OFFICIAL_API, "ads/").concat(id, "/report"), {}, { Authorization: Authorization }, {});
 };
-var UpdateUserAd = function (body, Authorization) {
-    if (Authorization === void 0) { Authorization = ''; }
-    return (0, request_1.YouthRoute)('patch', "".concat(api_1.OFFICIAL_API, "ads"), {}, { Authorization: Authorization }, body);
+var UpdateAd = function (body, token) {
+    if (token === void 0) { token = ''; }
+    return (0, request_1.YouthRoute)('patch', "".concat(api_1.OFFICIAL_API, "ads"), {}, { token: token }, body);
 };
 var SignAds = function (token) {
     if (token === void 0) { token = ''; }
@@ -48,8 +66,12 @@ var GetDepartmentAds = function (from, to, signed, count, token) {
     }, { token: token }, {});
 };
 var Ads = {
+    Job: Job,
+    UploadAttachment: UploadAttachment,
+    FetchAttachments: FetchAttachments,
+    FetchAttachment: FetchAttachment,
     CreateUserAd: CreateUserAd,
-    UpdateUserAd: UpdateUserAd,
+    UpdateAd: UpdateAd,
     SignAds: SignAds,
     RemoveAd: RemoveAd,
     GetDepartmentAds: GetDepartmentAds,

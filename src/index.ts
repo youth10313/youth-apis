@@ -11,6 +11,7 @@ import Feeds from "./apis/data/feeds";
 import Settings from "./apis/data/settings";
 import Translations from "./apis/data/translate";
 import Ads from "./apis/office/ads";
+import Assets from "./apis/office/assets";
 import Blazer from "./apis/office/blazer";
 import Citizens from "./apis/office/citizens";
 import Communication from "./apis/office/communication";
@@ -36,6 +37,7 @@ const YouthServers = {
     },
     Office: {
         Ads,
+        Assets,
         Blazer,
         Citizens,
         Communication,

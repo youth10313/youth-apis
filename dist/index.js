@@ -16,6 +16,7 @@ var feeds_1 = __importDefault(require("./apis/data/feeds"));
 var settings_1 = __importDefault(require("./apis/data/settings"));
 var translate_1 = __importDefault(require("./apis/data/translate"));
 var ads_1 = __importDefault(require("./apis/office/ads"));
+var assets_1 = __importDefault(require("./apis/office/assets"));
 var blazer_1 = __importDefault(require("./apis/office/blazer"));
 var citizens_1 = __importDefault(require("./apis/office/citizens"));
 var communication_1 = __importDefault(require("./apis/office/communication"));
@@ -40,6 +41,7 @@ var YouthServers = {
     },
     Office: {
         Ads: ads_1.default,
+        Assets: assets_1.default,
         Blazer: blazer_1.default,
         Citizens: citizens_1.default,
         Communication: communication_1.default,
