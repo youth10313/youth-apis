@@ -10,7 +10,7 @@ const FetchAttachment = (id: string, file: string, responseType?: ResponseType, 
 const CreateUserAd = (body: AdBody, Authorization = '') => YouthRoute<{ id: string }>('post', `${OFFICIAL_API}ads`, {}, { Authorization }, body);
 const SendUserAdReport = (id: string, body: { description: string }, Authorization = '') => YouthRoute<{ id: string }>('post', `${OFFICIAL_API}ads/${id}`, {}, { Authorization }, body);
 const DeleteUserAdReport = (id: string, Authorization = '') => YouthRoute<{ id: string }>('delete', `${OFFICIAL_API}ads/${id}/report`, {}, { Authorization }, {});
-const UpdateAd = (body: any, token = '') => YouthRoute<{ id: string }>('patch', `${OFFICIAL_API}ads`, {}, { token }, body);
+const UpdateAd = (id: string, body: any, token = '') => YouthRoute<{ id: string }>('patch', `${OFFICIAL_API}ads/${id}`, {}, { token }, body);
 const SignAds = (token = '') => YouthRoute<{ id: string }>('post', `${OFFICIAL_API}ads`, {}, { token }, {});
 const RemoveAd = (id: string, token = '', Authorization = '') => YouthRoute<{ msg: "DELETED" }>('delete', `${OFFICIAL_API}ads/${id}`, {}, { token, Authorization }, {});
 const GetUserAds = (from: Date | undefined, to: Date | undefined, signed: boolean, count: boolean, Authorization = '') => YouthRoute<Ad[]>('get', `${OFFICIAL_API}ads`, {

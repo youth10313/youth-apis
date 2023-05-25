@@ -32,9 +32,9 @@ var DeleteUserAdReport = function (id, Authorization) {
     if (Authorization === void 0) { Authorization = ''; }
     return (0, request_1.YouthRoute)('delete', "".concat(api_1.OFFICIAL_API, "ads/").concat(id, "/report"), {}, { Authorization: Authorization }, {});
 };
-var UpdateAd = function (body, token) {
+var UpdateAd = function (id, body, token) {
     if (token === void 0) { token = ''; }
-    return (0, request_1.YouthRoute)('patch', "".concat(api_1.OFFICIAL_API, "ads"), {}, { token: token }, body);
+    return (0, request_1.YouthRoute)('patch', "".concat(api_1.OFFICIAL_API, "ads/").concat(id), {}, { token: token }, body);
 };
 var SignAds = function (token) {
     if (token === void 0) { token = ''; }

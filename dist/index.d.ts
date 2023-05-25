@@ -3362,7 +3362,7 @@ declare const YouthServers: {
                 subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
-            UpdateAd: (body: any, token?: string) => {
+            UpdateAd: (id: string, body: any, token?: string) => {
                 onComplete: (func: <A_148 = {
                     id: string;
                 }>(data: A_148) => any) => any;

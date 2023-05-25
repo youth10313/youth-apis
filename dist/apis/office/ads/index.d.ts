@@ -61,7 +61,7 @@ declare const Ads: {
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
-    UpdateAd: (body: any, token?: string) => {
+    UpdateAd: (id: string, body: any, token?: string) => {
         onComplete: (func: <A_5 = {
             id: string;
         }>(data: A_5) => any) => any;
