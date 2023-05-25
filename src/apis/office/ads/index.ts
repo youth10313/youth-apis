@@ -6,7 +6,7 @@ import { YouthRoute } from "../../../models/request";
 const Job = (fetch: boolean, Authorization = '') => YouthRoute<{ id: string }>('post', `${OFFICIAL_API}ads/job`, { fetch }, { Authorization }, {});
 const UploadAttachment = (id: string, body: { title: any, file: any, type: any }, Authorization = '') => YouthRoute<{ id: string }>('post', `${OFFICIAL_API}ads/${id}/attachments`, {}, { Authorization }, body);
 const FetchAttachments = (id: string, Authorization = '', token: string = '') => YouthRoute<{ id: string }>('get', `${OFFICIAL_API}ads/${id}/attachments`, {}, { Authorization, token }, {});
-const FetchAttachment = (id: string, file: string, responseType?: ResponseType, Authorization = '', token: string = '') => YouthRoute<any>('get', `${OFFICIAL_API}ads/${id}/attachments/${file}`, {}, { Authorization, token }, { responseType });
+const FetchAttachment = (id: string, file: string, responseType?: ResponseType, Authorization = '', token: string = '') => YouthRoute<any>('get', `${OFFICIAL_API}ads/${id}/attachments/${file}`, {}, { Authorization, token }, {}, undefined, responseType);
 const CreateUserAd = (body: AdBody, Authorization = '') => YouthRoute<{ id: string }>('post', `${OFFICIAL_API}ads`, {}, { Authorization }, body);
 const SendUserAdReport = (id: string, body: { description: string }, Authorization = '') => YouthRoute<{ id: string }>('post', `${OFFICIAL_API}ads/${id}`, {}, { Authorization }, body);
 const DeleteUserAdReport = (id: string, Authorization = '') => YouthRoute<{ id: string }>('delete', `${OFFICIAL_API}ads/${id}/report`, {}, { Authorization }, {});

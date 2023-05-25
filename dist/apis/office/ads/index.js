@@ -18,7 +18,7 @@ var FetchAttachments = function (id, Authorization, token) {
 var FetchAttachment = function (id, file, responseType, Authorization, token) {
     if (Authorization === void 0) { Authorization = ''; }
     if (token === void 0) { token = ''; }
-    return (0, request_1.YouthRoute)('get', "".concat(api_1.OFFICIAL_API, "ads/").concat(id, "/attachments/").concat(file), {}, { Authorization: Authorization, token: token }, { responseType: responseType });
+    return (0, request_1.YouthRoute)('get', "".concat(api_1.OFFICIAL_API, "ads/").concat(id, "/attachments/").concat(file), {}, { Authorization: Authorization, token: token }, {}, undefined, responseType);
 };
 var CreateUserAd = function (body, Authorization) {
     if (Authorization === void 0) { Authorization = ''; }
