@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios, { ResponseType } from "axios"
 import { Args } from "../@types/subscribe";
 
 export const YouthAPI = <T>(
@@ -9,9 +9,10 @@ export const YouthAPI = <T>(
     body: any,
     onChange: (state: boolean) => void | any,
     controller: AbortController,
-    timeout = 1000 * 60 * 10) => new Promise<T>((resolve, reject) => {
+    timeout = 1000 * 60 * 10,
+    responseType?: ResponseType) => new Promise<T>((resolve, reject) => {
         onChange(true)
-        const ax = method === 'get' || method === 'delete' ? axios[method](url, { headers, params, timeout, signal: controller.signal }) : axios[method](url, body, { headers, params, timeout, signal: controller.signal });
+        const ax = method === 'get' || method === 'delete' ? axios[method](url, { headers, params, timeout, signal: controller.signal }) : axios[method](url, body, { headers, params, timeout, signal: controller.signal, responseType });
         ax.then(res => {
             resolve(res.data as T);
             onChange(false)
@@ -27,7 +28,8 @@ export const YouthRoute = <T>(
     params: any,
     headers: any,
     body: any,
-    timeout = 1000 * 60 * 10) => {
+    timeout = 1000 * 60 * 10,
+    responseType?: ResponseType) => {
     const controller = new AbortController();
     let complete: (data: T) => any = res => res;
     let error: (err: any) => any = err => err;
@@ -68,7 +70,7 @@ export const YouthRoute = <T>(
                 })
                 params['project'] = queryType;
             }
-            YouthAPI<T>(method, url, params, headers, body, change, controller, timeout)
+            YouthAPI<T>(method, url, params, headers, body, change, controller, timeout, responseType)
                 .then(res => complete(convert(res)))
                 .catch(err => error(err))
         },

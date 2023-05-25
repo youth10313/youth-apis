@@ -3342,15 +3342,11 @@ declare const YouthServers: {
                 subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
-            FetchAttachment: (id: string, file: string, Authorization?: string, token?: string) => {
-                onComplete: (func: <A_146 = {
-                    id: string;
-                }>(data: A_146) => any) => any;
+            FetchAttachment: (id: string, file: string, responseType?: import("axios").ResponseType | undefined, Authorization?: string, token?: string) => {
+                onComplete: (func: <A_146 = any>(data: A_146) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: {
-                    id: string;
-                }) => any) => any;
+                Convert: (func: (data: any) => any) => any;
                 subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };

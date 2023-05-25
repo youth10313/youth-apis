@@ -5,11 +5,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.YouthRoute = exports.YouthAPI = void 0;
 var axios_1 = __importDefault(require("axios"));
-var YouthAPI = function (method, url, params, headers, body, onChange, controller, timeout) {
+var YouthAPI = function (method, url, params, headers, body, onChange, controller, timeout, responseType) {
     if (timeout === void 0) { timeout = 1000 * 60 * 10; }
     return new Promise(function (resolve, reject) {
         onChange(true);
-        var ax = method === 'get' || method === 'delete' ? axios_1.default[method](url, { headers: headers, params: params, timeout: timeout, signal: controller.signal }) : axios_1.default[method](url, body, { headers: headers, params: params, timeout: timeout, signal: controller.signal });
+        var ax = method === 'get' || method === 'delete' ? axios_1.default[method](url, { headers: headers, params: params, timeout: timeout, signal: controller.signal }) : axios_1.default[method](url, body, { headers: headers, params: params, timeout: timeout, signal: controller.signal, responseType: responseType });
         ax.then(function (res) {
             resolve(res.data);
             onChange(false);
@@ -20,7 +20,7 @@ var YouthAPI = function (method, url, params, headers, body, onChange, controlle
     });
 };
 exports.YouthAPI = YouthAPI;
-var YouthRoute = function (method, url, params, headers, body, timeout) {
+var YouthRoute = function (method, url, params, headers, body, timeout, responseType) {
     if (timeout === void 0) { timeout = 1000 * 60 * 10; }
     var controller = new AbortController();
     var complete = function (res) { return res; };
@@ -63,7 +63,7 @@ var YouthRoute = function (method, url, params, headers, body, timeout) {
                 });
                 params['project'] = queryType_1;
             }
-            (0, exports.YouthAPI)(method, url, params, headers, body, change, controller, timeout)
+            (0, exports.YouthAPI)(method, url, params, headers, body, change, controller, timeout, responseType)
                 .then(function (res) { return complete(convert(res)); })
                 .catch(function (err) { return error(err); });
         },

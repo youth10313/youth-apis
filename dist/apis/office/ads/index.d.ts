@@ -1,3 +1,4 @@
+import { ResponseType } from "axios";
 import { Ad, AdBody } from "../../../@types/ads";
 declare const Ads: {
     Job: (fetch: boolean, Authorization?: string) => {
@@ -40,15 +41,11 @@ declare const Ads: {
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
-    FetchAttachment: (id: string, file: string, Authorization?: string, token?: string) => {
-        onComplete: (func: <A_3 = {
-            id: string;
-        }>(data: A_3) => any) => any;
+    FetchAttachment: (id: string, file: string, responseType?: ResponseType, Authorization?: string, token?: string) => {
+        onComplete: (func: <A_3 = any>(data: A_3) => any) => any;
         onError: (func: (err: any) => any) => any;
         onChange: (func: (state: boolean) => any) => any;
-        Convert: (func: (data: {
-            id: string;
-        }) => any) => any;
+        Convert: (func: (data: any) => any) => any;
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
