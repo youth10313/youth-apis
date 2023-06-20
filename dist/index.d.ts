@@ -2231,26 +2231,24 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                 };
-            };
-            Main: {
-                Sermons: {
+                ledgers: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_80 = import("./@types/sermon").Sermon>(data: A_80) => any) => any;
+                        onComplete: (func: <A_80 = import("./@types/ledger").Ledger>(data: A_80) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/sermon").Sermon) => any) => any;
+                        Convert: (func: (data: import("./@types/ledger").Ledger) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComplete: (func: <A_81 = import("./@types/sermon").Sermon[]>(data: A_81) => any) => any;
+                        onComplete: (func: <A_81 = import("./@types/common").Pagination<import("./@types/ledger").Ledger>>(data: A_81) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/sermon").Sermon[]) => any) => any;
+                        Convert: (func: (data: import("./@types/common").Pagination<import("./@types/ledger").Ledger>) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
-                    create: (body: import("./@types/sermon").Sermon, locale: string, Authorization?: string) => {
+                    create: (body: import("./@types/ledger").Ledger, locale: string, Authorization?: string) => {
                         onComplete: (func: <A_82 = {
                             id: string;
                         }>(data: A_82) => any) => any;
@@ -2287,48 +2285,48 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_80 = import("./@types/sermon").Sermon>(data: A_80) => any) => any;
+                        onComplete: (func: <A_80 = import("./@types/ledger").Ledger>(data: A_80) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/sermon").Sermon) => any) => any;
+                        Convert: (func: (data: import("./@types/ledger").Ledger) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_80 = import("./@types/sermon").Sermon>(data: A_80) => any) => any;
+                        onComplete: (func: <A_80 = import("./@types/ledger").Ledger>(data: A_80) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/sermon").Sermon) => any) => any;
+                        Convert: (func: (data: import("./@types/ledger").Ledger) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_80 = import("./@types/sermon").Sermon>(data: A_80) => any) => any;
+                        onComplete: (func: <A_80 = import("./@types/ledger").Ledger>(data: A_80) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/sermon").Sermon) => any) => any;
+                        Convert: (func: (data: import("./@types/ledger").Ledger) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
-                Meetings: {
+                seasons: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_85 = import("./@types/meeting").Meeting>(data: A_85) => any) => any;
+                        onComplete: (func: <A_85 = import("./@types/ledger").Season>(data: A_85) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/meeting").Meeting) => any) => any;
+                        Convert: (func: (data: import("./@types/ledger").Season) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComplete: (func: <A_86 = import("./@types/meeting").Meeting[]>(data: A_86) => any) => any;
+                        onComplete: (func: <A_86 = import("./@types/common").Pagination<import("./@types/ledger").Season>>(data: A_86) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/meeting").Meeting[]) => any) => any;
+                        Convert: (func: (data: import("./@types/common").Pagination<import("./@types/ledger").Season>) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
-                    create: (body: import("./@types/meeting").Meeting, locale: string, Authorization?: string) => {
+                    create: (body: import("./@types/ledger").Season, locale: string, Authorization?: string) => {
                         onComplete: (func: <A_87 = {
                             id: string;
                         }>(data: A_87) => any) => any;
@@ -2365,48 +2363,50 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_85 = import("./@types/meeting").Meeting>(data: A_85) => any) => any;
+                        onComplete: (func: <A_85 = import("./@types/ledger").Season>(data: A_85) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/meeting").Meeting) => any) => any;
+                        Convert: (func: (data: import("./@types/ledger").Season) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_85 = import("./@types/meeting").Meeting>(data: A_85) => any) => any;
+                        onComplete: (func: <A_85 = import("./@types/ledger").Season>(data: A_85) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/meeting").Meeting) => any) => any;
+                        Convert: (func: (data: import("./@types/ledger").Season) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_85 = import("./@types/meeting").Meeting>(data: A_85) => any) => any;
+                        onComplete: (func: <A_85 = import("./@types/ledger").Season>(data: A_85) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/meeting").Meeting) => any) => any;
+                        Convert: (func: (data: import("./@types/ledger").Season) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
-                Statements: {
+            };
+            Main: {
+                Sermons: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_90 = import("./@types/statement").Statement>(data: A_90) => any) => any;
+                        onComplete: (func: <A_90 = import("./@types/sermon").Sermon>(data: A_90) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/statement").Statement) => any) => any;
+                        Convert: (func: (data: import("./@types/sermon").Sermon) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComplete: (func: <A_91 = import("./@types/statement").Statement[]>(data: A_91) => any) => any;
+                        onComplete: (func: <A_91 = import("./@types/sermon").Sermon[]>(data: A_91) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/statement").Statement[]) => any) => any;
+                        Convert: (func: (data: import("./@types/sermon").Sermon[]) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
-                    create: (body: import("./@types/statement").Statement, locale: string, Authorization?: string) => {
+                    create: (body: import("./@types/sermon").Sermon, locale: string, Authorization?: string) => {
                         onComplete: (func: <A_92 = {
                             id: string;
                         }>(data: A_92) => any) => any;
@@ -2443,48 +2443,48 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_90 = import("./@types/statement").Statement>(data: A_90) => any) => any;
+                        onComplete: (func: <A_90 = import("./@types/sermon").Sermon>(data: A_90) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/statement").Statement) => any) => any;
+                        Convert: (func: (data: import("./@types/sermon").Sermon) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_90 = import("./@types/statement").Statement>(data: A_90) => any) => any;
+                        onComplete: (func: <A_90 = import("./@types/sermon").Sermon>(data: A_90) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/statement").Statement) => any) => any;
+                        Convert: (func: (data: import("./@types/sermon").Sermon) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_90 = import("./@types/statement").Statement>(data: A_90) => any) => any;
+                        onComplete: (func: <A_90 = import("./@types/sermon").Sermon>(data: A_90) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/statement").Statement) => any) => any;
+                        Convert: (func: (data: import("./@types/sermon").Sermon) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
-                Ansars: {
+                Meetings: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_95 = import("./@types/ansar").Ansar>(data: A_95) => any) => any;
+                        onComplete: (func: <A_95 = import("./@types/meeting").Meeting>(data: A_95) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/ansar").Ansar) => any) => any;
+                        Convert: (func: (data: import("./@types/meeting").Meeting) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComplete: (func: <A_96 = import("./@types/ansar").Ansar[]>(data: A_96) => any) => any;
+                        onComplete: (func: <A_96 = import("./@types/meeting").Meeting[]>(data: A_96) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/ansar").Ansar[]) => any) => any;
+                        Convert: (func: (data: import("./@types/meeting").Meeting[]) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
-                    create: (body: import("./@types/ansar").Ansar, locale: string, Authorization?: string) => {
+                    create: (body: import("./@types/meeting").Meeting, locale: string, Authorization?: string) => {
                         onComplete: (func: <A_97 = {
                             id: string;
                         }>(data: A_97) => any) => any;
@@ -2521,48 +2521,48 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_95 = import("./@types/ansar").Ansar>(data: A_95) => any) => any;
+                        onComplete: (func: <A_95 = import("./@types/meeting").Meeting>(data: A_95) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/ansar").Ansar) => any) => any;
+                        Convert: (func: (data: import("./@types/meeting").Meeting) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_95 = import("./@types/ansar").Ansar>(data: A_95) => any) => any;
+                        onComplete: (func: <A_95 = import("./@types/meeting").Meeting>(data: A_95) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/ansar").Ansar) => any) => any;
+                        Convert: (func: (data: import("./@types/meeting").Meeting) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_95 = import("./@types/ansar").Ansar>(data: A_95) => any) => any;
+                        onComplete: (func: <A_95 = import("./@types/meeting").Meeting>(data: A_95) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/ansar").Ansar) => any) => any;
+                        Convert: (func: (data: import("./@types/meeting").Meeting) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
-                Histories: {
+                Statements: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_100 = import("./@types/history").History>(data: A_100) => any) => any;
+                        onComplete: (func: <A_100 = import("./@types/statement").Statement>(data: A_100) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/history").History) => any) => any;
+                        Convert: (func: (data: import("./@types/statement").Statement) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComplete: (func: <A_101 = import("./@types/history").History[]>(data: A_101) => any) => any;
+                        onComplete: (func: <A_101 = import("./@types/statement").Statement[]>(data: A_101) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/history").History[]) => any) => any;
+                        Convert: (func: (data: import("./@types/statement").Statement[]) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
-                    create: (body: import("./@types/history").History, locale: string, Authorization?: string) => {
+                    create: (body: import("./@types/statement").Statement, locale: string, Authorization?: string) => {
                         onComplete: (func: <A_102 = {
                             id: string;
                         }>(data: A_102) => any) => any;
@@ -2599,50 +2599,48 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_100 = import("./@types/history").History>(data: A_100) => any) => any;
+                        onComplete: (func: <A_100 = import("./@types/statement").Statement>(data: A_100) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/history").History) => any) => any;
+                        Convert: (func: (data: import("./@types/statement").Statement) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_100 = import("./@types/history").History>(data: A_100) => any) => any;
+                        onComplete: (func: <A_100 = import("./@types/statement").Statement>(data: A_100) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/history").History) => any) => any;
+                        Convert: (func: (data: import("./@types/statement").Statement) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_100 = import("./@types/history").History>(data: A_100) => any) => any;
+                        onComplete: (func: <A_100 = import("./@types/statement").Statement>(data: A_100) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/history").History) => any) => any;
+                        Convert: (func: (data: import("./@types/statement").Statement) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
-            };
-            Musics: {
-                Tracks: {
+                Ansars: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_105 = import("./@types/track").Track>(data: A_105) => any) => any;
+                        onComplete: (func: <A_105 = import("./@types/ansar").Ansar>(data: A_105) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/track").Track) => any) => any;
+                        Convert: (func: (data: import("./@types/ansar").Ansar) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComplete: (func: <A_106 = import("./@types/common").Pagination<import("./@types/track").Track>>(data: A_106) => any) => any;
+                        onComplete: (func: <A_106 = import("./@types/ansar").Ansar[]>(data: A_106) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/common").Pagination<import("./@types/track").Track>) => any) => any;
+                        Convert: (func: (data: import("./@types/ansar").Ansar[]) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
-                    create: (body: import("./@types/track").Track, locale: string, Authorization?: string) => {
+                    create: (body: import("./@types/ansar").Ansar, locale: string, Authorization?: string) => {
                         onComplete: (func: <A_107 = {
                             id: string;
                         }>(data: A_107) => any) => any;
@@ -2679,48 +2677,48 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_105 = import("./@types/track").Track>(data: A_105) => any) => any;
+                        onComplete: (func: <A_105 = import("./@types/ansar").Ansar>(data: A_105) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/track").Track) => any) => any;
+                        Convert: (func: (data: import("./@types/ansar").Ansar) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_105 = import("./@types/track").Track>(data: A_105) => any) => any;
+                        onComplete: (func: <A_105 = import("./@types/ansar").Ansar>(data: A_105) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/track").Track) => any) => any;
+                        Convert: (func: (data: import("./@types/ansar").Ansar) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_105 = import("./@types/track").Track>(data: A_105) => any) => any;
+                        onComplete: (func: <A_105 = import("./@types/ansar").Ansar>(data: A_105) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/track").Track) => any) => any;
+                        Convert: (func: (data: import("./@types/ansar").Ansar) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
-                Podcasts: {
+                Histories: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_110 = import("./@types/podcast").Podcast>(data: A_110) => any) => any;
+                        onComplete: (func: <A_110 = import("./@types/history").History>(data: A_110) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/podcast").Podcast) => any) => any;
+                        Convert: (func: (data: import("./@types/history").History) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComplete: (func: <A_111 = import("./@types/common").Pagination<import("./@types/podcast").Podcast>>(data: A_111) => any) => any;
+                        onComplete: (func: <A_111 = import("./@types/history").History[]>(data: A_111) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/common").Pagination<import("./@types/podcast").Podcast>) => any) => any;
+                        Convert: (func: (data: import("./@types/history").History[]) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
-                    create: (body: import("./@types/podcast").Podcast, locale: string, Authorization?: string) => {
+                    create: (body: import("./@types/history").History, locale: string, Authorization?: string) => {
                         onComplete: (func: <A_112 = {
                             id: string;
                         }>(data: A_112) => any) => any;
@@ -2757,7 +2755,165 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_110 = import("./@types/podcast").Podcast>(data: A_110) => any) => any;
+                        onComplete: (func: <A_110 = import("./@types/history").History>(data: A_110) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/history").History) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    empty: (locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_110 = import("./@types/history").History>(data: A_110) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/history").History) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    restore: (id: string, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_110 = import("./@types/history").History>(data: A_110) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/history").History) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                };
+            };
+            Musics: {
+                Tracks: {
+                    fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_115 = import("./@types/track").Track>(data: A_115) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/track").Track) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                        onComplete: (func: <A_116 = import("./@types/common").Pagination<import("./@types/track").Track>>(data: A_116) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/common").Pagination<import("./@types/track").Track>) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    create: (body: import("./@types/track").Track, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_117 = {
+                            id: string;
+                        }>(data: A_117) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: {
+                            id: string;
+                        }) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    update: (id: string, body: any, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_118 = {
+                            msg: "UPDATED";
+                        }>(data: A_118) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: {
+                            msg: "UPDATED";
+                        }) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    remove: (id: string, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_119 = {
+                            msg: "DELETED";
+                        }>(data: A_119) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: {
+                            msg: "DELETED";
+                        }) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    trash: (locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_115 = import("./@types/track").Track>(data: A_115) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/track").Track) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    empty: (locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_115 = import("./@types/track").Track>(data: A_115) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/track").Track) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    restore: (id: string, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_115 = import("./@types/track").Track>(data: A_115) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/track").Track) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                };
+                Podcasts: {
+                    fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_120 = import("./@types/podcast").Podcast>(data: A_120) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/podcast").Podcast) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                        onComplete: (func: <A_121 = import("./@types/common").Pagination<import("./@types/podcast").Podcast>>(data: A_121) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/common").Pagination<import("./@types/podcast").Podcast>) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    create: (body: import("./@types/podcast").Podcast, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_122 = {
+                            id: string;
+                        }>(data: A_122) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: {
+                            id: string;
+                        }) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    update: (id: string, body: any, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_123 = {
+                            msg: "UPDATED";
+                        }>(data: A_123) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: {
+                            msg: "UPDATED";
+                        }) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    remove: (id: string, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_124 = {
+                            msg: "DELETED";
+                        }>(data: A_124) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: {
+                            msg: "DELETED";
+                        }) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    trash: (locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_120 = import("./@types/podcast").Podcast>(data: A_120) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: import("./@types/podcast").Podcast) => any) => any;
@@ -2765,7 +2921,7 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_110 = import("./@types/podcast").Podcast>(data: A_110) => any) => any;
+                        onComplete: (func: <A_120 = import("./@types/podcast").Podcast>(data: A_120) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: import("./@types/podcast").Podcast) => any) => any;
@@ -2773,7 +2929,7 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_110 = import("./@types/podcast").Podcast>(data: A_110) => any) => any;
+                        onComplete: (func: <A_120 = import("./@types/podcast").Podcast>(data: A_120) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: import("./@types/podcast").Podcast) => any) => any;
@@ -2785,7 +2941,7 @@ declare const YouthServers: {
             Reasons: {
                 ReasonsFeeds: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_115 = import("./@types/reason").Reason>(data: A_115) => any) => any;
+                        onComplete: (func: <A_125 = import("./@types/reason").Reason>(data: A_125) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: import("./@types/reason").Reason) => any) => any;
@@ -2793,7 +2949,7 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComplete: (func: <A_115 = import("./@types/reason").Reason>(data: A_115) => any) => any;
+                        onComplete: (func: <A_125 = import("./@types/reason").Reason>(data: A_125) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: import("./@types/reason").Reason) => any) => any;
@@ -2801,9 +2957,9 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     create: (body: import("./@types/reason").Reason, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_116 = {
+                        onComplete: (func: <A_126 = {
                             id: string;
-                        }>(data: A_116) => any) => any;
+                        }>(data: A_126) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: {
@@ -2813,9 +2969,9 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_117 = {
+                        onComplete: (func: <A_127 = {
                             msg: "UPDATED";
-                        }>(data: A_117) => any) => any;
+                        }>(data: A_127) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: {
@@ -2825,9 +2981,9 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     remove: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_118 = {
+                        onComplete: (func: <A_128 = {
                             msg: "DELETED";
-                        }>(data: A_118) => any) => any;
+                        }>(data: A_128) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: {
@@ -2837,7 +2993,7 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_115 = import("./@types/reason").Reason>(data: A_115) => any) => any;
+                        onComplete: (func: <A_125 = import("./@types/reason").Reason>(data: A_125) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: import("./@types/reason").Reason) => any) => any;
@@ -2845,7 +3001,7 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_115 = import("./@types/reason").Reason>(data: A_115) => any) => any;
+                        onComplete: (func: <A_125 = import("./@types/reason").Reason>(data: A_125) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: import("./@types/reason").Reason) => any) => any;
@@ -2853,7 +3009,7 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_115 = import("./@types/reason").Reason>(data: A_115) => any) => any;
+                        onComplete: (func: <A_125 = import("./@types/reason").Reason>(data: A_125) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: import("./@types/reason").Reason) => any) => any;
@@ -2863,7 +3019,7 @@ declare const YouthServers: {
                 };
                 Religions: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_119 = import("./@types/religion").Religion>(data: A_119) => any) => any;
+                        onComplete: (func: <A_129 = import("./@types/religion").Religion>(data: A_129) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: import("./@types/religion").Religion) => any) => any;
@@ -2871,7 +3027,7 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComplete: (func: <A_119 = import("./@types/religion").Religion>(data: A_119) => any) => any;
+                        onComplete: (func: <A_129 = import("./@types/religion").Religion>(data: A_129) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: import("./@types/religion").Religion) => any) => any;
@@ -2879,164 +3035,6 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     create: (body: import("./@types/religion").Religion, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_120 = {
-                            id: string;
-                        }>(data: A_120) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: {
-                            id: string;
-                        }) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_121 = {
-                            msg: "UPDATED";
-                        }>(data: A_121) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: {
-                            msg: "UPDATED";
-                        }) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    remove: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_122 = {
-                            msg: "DELETED";
-                        }>(data: A_122) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: {
-                            msg: "DELETED";
-                        }) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    trash: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_119 = import("./@types/religion").Religion>(data: A_119) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/religion").Religion) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    empty: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_119 = import("./@types/religion").Religion>(data: A_119) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/religion").Religion) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    restore: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_119 = import("./@types/religion").Religion>(data: A_119) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/religion").Religion) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                };
-            };
-            School: {
-                Classes: {
-                    fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_123 = import("./@types/class").Class>(data: A_123) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/class").Class) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComplete: (func: <A_124 = import("./@types/common").Pagination<import("./@types/class").Class>>(data: A_124) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/common").Pagination<import("./@types/class").Class>) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    create: (body: import("./@types/class").Class, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_125 = {
-                            id: string;
-                        }>(data: A_125) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: {
-                            id: string;
-                        }) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    update: (id: string, body: any, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_126 = {
-                            msg: "UPDATED";
-                        }>(data: A_126) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: {
-                            msg: "UPDATED";
-                        }) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    remove: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_127 = {
-                            msg: "DELETED";
-                        }>(data: A_127) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: {
-                            msg: "DELETED";
-                        }) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    trash: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_123 = import("./@types/class").Class>(data: A_123) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/class").Class) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    empty: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_123 = import("./@types/class").Class>(data: A_123) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/class").Class) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    restore: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_123 = import("./@types/class").Class>(data: A_123) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/class").Class) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                };
-                Lessons: {
-                    fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_128 = import("./@types/lesson").Lesson>(data: A_128) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/lesson").Lesson) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComplete: (func: <A_129 = import("./@types/common").Pagination<import("./@types/lesson").Lesson>>(data: A_129) => any) => any;
-                        onError: (func: (err: any) => any) => any;
-                        onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/common").Pagination<import("./@types/lesson").Lesson>) => any) => any;
-                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                        abort: () => void;
-                    };
-                    create: (body: import("./@types/lesson").Lesson, locale: string, Authorization?: string) => {
                         onComplete: (func: <A_130 = {
                             id: string;
                         }>(data: A_130) => any) => any;
@@ -3073,48 +3071,50 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_128 = import("./@types/lesson").Lesson>(data: A_128) => any) => any;
+                        onComplete: (func: <A_129 = import("./@types/religion").Religion>(data: A_129) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/lesson").Lesson) => any) => any;
+                        Convert: (func: (data: import("./@types/religion").Religion) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_128 = import("./@types/lesson").Lesson>(data: A_128) => any) => any;
+                        onComplete: (func: <A_129 = import("./@types/religion").Religion>(data: A_129) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/lesson").Lesson) => any) => any;
+                        Convert: (func: (data: import("./@types/religion").Religion) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_128 = import("./@types/lesson").Lesson>(data: A_128) => any) => any;
+                        onComplete: (func: <A_129 = import("./@types/religion").Religion>(data: A_129) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/lesson").Lesson) => any) => any;
+                        Convert: (func: (data: import("./@types/religion").Religion) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                 };
-                Teachers: {
+            };
+            School: {
+                Classes: {
                     fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_133 = import("./@types/teacher").Teacher>(data: A_133) => any) => any;
+                        onComplete: (func: <A_133 = import("./@types/class").Class>(data: A_133) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/teacher").Teacher) => any) => any;
+                        Convert: (func: (data: import("./@types/class").Class) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
                     fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
-                        onComplete: (func: <A_134 = import("./@types/common").Pagination<import("./@types/teacher").Teacher>>(data: A_134) => any) => any;
+                        onComplete: (func: <A_134 = import("./@types/common").Pagination<import("./@types/class").Class>>(data: A_134) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
-                        Convert: (func: (data: import("./@types/common").Pagination<import("./@types/teacher").Teacher>) => any) => any;
+                        Convert: (func: (data: import("./@types/common").Pagination<import("./@types/class").Class>) => any) => any;
                         subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                         abort: () => void;
                     };
-                    create: (body: import("./@types/teacher").Teacher, locale: string, Authorization?: string) => {
+                    create: (body: import("./@types/class").Class, locale: string, Authorization?: string) => {
                         onComplete: (func: <A_135 = {
                             id: string;
                         }>(data: A_135) => any) => any;
@@ -3151,7 +3151,163 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     trash: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_133 = import("./@types/teacher").Teacher>(data: A_133) => any) => any;
+                        onComplete: (func: <A_133 = import("./@types/class").Class>(data: A_133) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/class").Class) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    empty: (locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_133 = import("./@types/class").Class>(data: A_133) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/class").Class) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    restore: (id: string, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_133 = import("./@types/class").Class>(data: A_133) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/class").Class) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                };
+                Lessons: {
+                    fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_138 = import("./@types/lesson").Lesson>(data: A_138) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/lesson").Lesson) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                        onComplete: (func: <A_139 = import("./@types/common").Pagination<import("./@types/lesson").Lesson>>(data: A_139) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/common").Pagination<import("./@types/lesson").Lesson>) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    create: (body: import("./@types/lesson").Lesson, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_140 = {
+                            id: string;
+                        }>(data: A_140) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: {
+                            id: string;
+                        }) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    update: (id: string, body: any, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_141 = {
+                            msg: "UPDATED";
+                        }>(data: A_141) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: {
+                            msg: "UPDATED";
+                        }) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    remove: (id: string, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_142 = {
+                            msg: "DELETED";
+                        }>(data: A_142) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: {
+                            msg: "DELETED";
+                        }) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    trash: (locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_138 = import("./@types/lesson").Lesson>(data: A_138) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/lesson").Lesson) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    empty: (locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_138 = import("./@types/lesson").Lesson>(data: A_138) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/lesson").Lesson) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    restore: (id: string, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_138 = import("./@types/lesson").Lesson>(data: A_138) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/lesson").Lesson) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                };
+                Teachers: {
+                    fetchOne: (latinTitle_or_id: string, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_143 = import("./@types/teacher").Teacher>(data: A_143) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/teacher").Teacher) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    fetch: (locale: string, querystring?: any, Authorization?: string, page?: number | undefined, perPage?: number | undefined, search?: string | undefined, sort_by?: string | undefined, sort_order?: "ASC" | "DESC" | undefined, date_start?: Date | undefined, date_end?: Date | undefined, category?: string | string[] | undefined) => {
+                        onComplete: (func: <A_144 = import("./@types/common").Pagination<import("./@types/teacher").Teacher>>(data: A_144) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: import("./@types/common").Pagination<import("./@types/teacher").Teacher>) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    create: (body: import("./@types/teacher").Teacher, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_145 = {
+                            id: string;
+                        }>(data: A_145) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: {
+                            id: string;
+                        }) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    update: (id: string, body: any, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_146 = {
+                            msg: "UPDATED";
+                        }>(data: A_146) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: {
+                            msg: "UPDATED";
+                        }) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    remove: (id: string, locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_147 = {
+                            msg: "DELETED";
+                        }>(data: A_147) => any) => any;
+                        onError: (func: (err: any) => any) => any;
+                        onChange: (func: (state: boolean) => any) => any;
+                        Convert: (func: (data: {
+                            msg: "DELETED";
+                        }) => any) => any;
+                        subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                        abort: () => void;
+                    };
+                    trash: (locale: string, Authorization?: string) => {
+                        onComplete: (func: <A_143 = import("./@types/teacher").Teacher>(data: A_143) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: import("./@types/teacher").Teacher) => any) => any;
@@ -3159,7 +3315,7 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     empty: (locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_133 = import("./@types/teacher").Teacher>(data: A_133) => any) => any;
+                        onComplete: (func: <A_143 = import("./@types/teacher").Teacher>(data: A_143) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: import("./@types/teacher").Teacher) => any) => any;
@@ -3167,7 +3323,7 @@ declare const YouthServers: {
                         abort: () => void;
                     };
                     restore: (id: string, locale: string, Authorization?: string) => {
-                        onComplete: (func: <A_133 = import("./@types/teacher").Teacher>(data: A_133) => any) => any;
+                        onComplete: (func: <A_143 = import("./@types/teacher").Teacher>(data: A_143) => any) => any;
                         onError: (func: (err: any) => any) => any;
                         onChange: (func: (state: boolean) => any) => any;
                         Convert: (func: (data: import("./@types/teacher").Teacher) => any) => any;
@@ -3231,9 +3387,9 @@ declare const YouthServers: {
         };
         Translations: {
             Translate: (app: string, i18n: import("./@types/common").I18n, locale: string, Authorization?: string) => {
-                onComplete: (func: <A_138 = {
+                onComplete: (func: <A_148 = {
                     msg: "TRANSLATED";
-                }>(data: A_138) => any) => any;
+                }>(data: A_148) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3243,7 +3399,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             App: (app: string) => {
-                onComplete: (func: <A_139 = import("./@types/common").I18nFull>(data: A_139) => any) => any;
+                onComplete: (func: <A_149 = import("./@types/common").I18nFull>(data: A_149) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/common").I18nFull) => any) => any;
@@ -3251,7 +3407,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             Locale: (app: string, locale: string) => {
-                onComplete: (func: <A_139 = import("./@types/common").I18nFull>(data: A_139) => any) => any;
+                onComplete: (func: <A_149 = import("./@types/common").I18nFull>(data: A_149) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/common").I18nFull) => any) => any;
@@ -3259,7 +3415,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             Module: (app: string, locale: string, module: string) => {
-                onComplete: (func: <A_139 = import("./@types/common").I18nFull>(data: A_139) => any) => any;
+                onComplete: (func: <A_149 = import("./@types/common").I18nFull>(data: A_149) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/common").I18nFull) => any) => any;
@@ -3267,9 +3423,9 @@ declare const YouthServers: {
                 abort: () => void;
             };
             AddLocale: (app: string, locale: string, Authorization?: string) => {
-                onComplete: (func: <A_140 = {
+                onComplete: (func: <A_150 = {
                     msg: "DONE";
-                }>(data: A_140) => any) => any;
+                }>(data: A_150) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3279,7 +3435,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             AppLocales: (app: string) => {
-                onComplete: (func: <A_141 = string[]>(data: A_141) => any) => any;
+                onComplete: (func: <A_151 = string[]>(data: A_151) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: string[]) => any) => any;
@@ -3287,9 +3443,9 @@ declare const YouthServers: {
                 abort: () => void;
             };
             RemoveLocale: (app: string, locale: string, Authorization?: string) => {
-                onComplete: (func: <A_142 = {
+                onComplete: (func: <A_152 = {
                     msg: "DONE";
-                }>(data: A_142) => any) => any;
+                }>(data: A_152) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3303,9 +3459,9 @@ declare const YouthServers: {
     Office: {
         Ads: {
             Job: (fetch: boolean, Authorization?: string) => {
-                onComplete: (func: <A_143 = {
+                onComplete: (func: <A_153 = {
                     id: string;
-                }>(data: A_143) => any) => any;
+                }>(data: A_153) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3319,146 +3475,6 @@ declare const YouthServers: {
                 file: any;
                 type: any;
             }, Authorization?: string) => {
-                onComplete: (func: <A_144 = {
-                    id: string;
-                }>(data: A_144) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: {
-                    id: string;
-                }) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-            FetchAttachments: (id: string, Authorization?: string, token?: string) => {
-                onComplete: (func: <A_145 = {
-                    id: string;
-                }>(data: A_145) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: {
-                    id: string;
-                }) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-            FetchAttachment: (id: string, file: string, responseType?: import("axios").ResponseType | undefined, Authorization?: string, token?: string) => {
-                onComplete: (func: <A_146 = any>(data: A_146) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: any) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-            CreateUserAd: (body: import("./@types/ads").AdBody, Authorization?: string) => {
-                onComplete: (func: <A_147 = {
-                    id: string;
-                }>(data: A_147) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: {
-                    id: string;
-                }) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-            UpdateAd: (id: string, body: any, token?: string) => {
-                onComplete: (func: <A_148 = {
-                    id: string;
-                }>(data: A_148) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: {
-                    id: string;
-                }) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-            SignAds: (token?: string) => {
-                onComplete: (func: <A_149 = {
-                    id: string;
-                }>(data: A_149) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: {
-                    id: string;
-                }) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-            RemoveAd: (id: string, token?: string, Authorization?: string) => {
-                onComplete: (func: <A_150 = {
-                    msg: "DELETED";
-                }>(data: A_150) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: {
-                    msg: "DELETED";
-                }) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-            GetDepartmentAds: (from: Date | undefined, to: Date | undefined, signed: boolean, count: boolean, token?: string) => {
-                onComplete: (func: <A_151 = import("./@types/ads").Ad[]>(data: A_151) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: import("./@types/ads").Ad[]) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-            GetUserAds: (from: Date | undefined, to: Date | undefined, signed: boolean, count: boolean, Authorization?: string) => {
-                onComplete: (func: <A_151 = import("./@types/ads").Ad[]>(data: A_151) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: import("./@types/ads").Ad[]) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-            SendUserAdReport: (id: string, body: {
-                description: string;
-            }, Authorization?: string) => {
-                onComplete: (func: <A_152 = {
-                    id: string;
-                }>(data: A_152) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: {
-                    id: string;
-                }) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-            DeleteUserAdReport: (id: string, Authorization?: string) => {
-                onComplete: (func: <A_153 = {
-                    id: string;
-                }>(data: A_153) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: {
-                    id: string;
-                }) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-            GetUserAdReports: (id: string, Authorization?: string) => {
-                onComplete: (func: <A_151 = import("./@types/ads").Ad[]>(data: A_151) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: import("./@types/ads").Ad[]) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-            GetDepartmentUserAdReports: (id: string, token?: string) => {
-                onComplete: (func: <A_151 = import("./@types/ads").Ad[]>(data: A_151) => any) => any;
-                onError: (func: (err: any) => any) => any;
-                onChange: (func: (state: boolean) => any) => any;
-                Convert: (func: (data: import("./@types/ads").Ad[]) => any) => any;
-                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
-                abort: () => void;
-            };
-        };
-        Assets: {
-            Save: (body: any, id?: string | undefined, token?: string) => {
                 onComplete: (func: <A_154 = {
                     id: string;
                 }>(data: A_154) => any) => any;
@@ -3470,10 +3486,150 @@ declare const YouthServers: {
                 subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
                 abort: () => void;
             };
-            Remove: (id: string, token?: string) => {
+            FetchAttachments: (id: string, Authorization?: string, token?: string) => {
                 onComplete: (func: <A_155 = {
-                    msg: string;
+                    id: string;
                 }>(data: A_155) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: {
+                    id: string;
+                }) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
+            FetchAttachment: (id: string, file: string, responseType?: import("axios").ResponseType | undefined, Authorization?: string, token?: string) => {
+                onComplete: (func: <A_156 = any>(data: A_156) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: any) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
+            CreateUserAd: (body: import("./@types/ads").AdBody, Authorization?: string) => {
+                onComplete: (func: <A_157 = {
+                    id: string;
+                }>(data: A_157) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: {
+                    id: string;
+                }) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
+            UpdateAd: (id: string, body: any, token?: string) => {
+                onComplete: (func: <A_158 = {
+                    id: string;
+                }>(data: A_158) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: {
+                    id: string;
+                }) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
+            SignAds: (token?: string) => {
+                onComplete: (func: <A_159 = {
+                    id: string;
+                }>(data: A_159) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: {
+                    id: string;
+                }) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
+            RemoveAd: (id: string, token?: string, Authorization?: string) => {
+                onComplete: (func: <A_160 = {
+                    msg: "DELETED";
+                }>(data: A_160) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: {
+                    msg: "DELETED";
+                }) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
+            GetDepartmentAds: (from: Date | undefined, to: Date | undefined, signed: boolean, count: boolean, token?: string) => {
+                onComplete: (func: <A_161 = import("./@types/ads").Ad[]>(data: A_161) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: import("./@types/ads").Ad[]) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
+            GetUserAds: (from: Date | undefined, to: Date | undefined, signed: boolean, count: boolean, Authorization?: string) => {
+                onComplete: (func: <A_161 = import("./@types/ads").Ad[]>(data: A_161) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: import("./@types/ads").Ad[]) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
+            SendUserAdReport: (id: string, body: {
+                description: string;
+            }, Authorization?: string) => {
+                onComplete: (func: <A_162 = {
+                    id: string;
+                }>(data: A_162) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: {
+                    id: string;
+                }) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
+            DeleteUserAdReport: (id: string, Authorization?: string) => {
+                onComplete: (func: <A_163 = {
+                    id: string;
+                }>(data: A_163) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: {
+                    id: string;
+                }) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
+            GetUserAdReports: (id: string, Authorization?: string) => {
+                onComplete: (func: <A_161 = import("./@types/ads").Ad[]>(data: A_161) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: import("./@types/ads").Ad[]) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
+            GetDepartmentUserAdReports: (id: string, token?: string) => {
+                onComplete: (func: <A_161 = import("./@types/ads").Ad[]>(data: A_161) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: import("./@types/ads").Ad[]) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
+        };
+        Assets: {
+            Save: (body: any, id?: string | undefined, token?: string) => {
+                onComplete: (func: <A_164 = {
+                    id: string;
+                }>(data: A_164) => any) => any;
+                onError: (func: (err: any) => any) => any;
+                onChange: (func: (state: boolean) => any) => any;
+                Convert: (func: (data: {
+                    id: string;
+                }) => any) => any;
+                subscribe: (projects?: string[] | undefined, args?: import("./@types/subscribe").Args | undefined) => void;
+                abort: () => void;
+            };
+            Remove: (id: string, token?: string) => {
+                onComplete: (func: <A_165 = {
+                    msg: string;
+                }>(data: A_165) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3483,7 +3639,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             Fetch: (token?: string) => {
-                onComplete: (func: <A_156 = any[]>(data: A_156) => any) => any;
+                onComplete: (func: <A_166 = any[]>(data: A_166) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: any[]) => any) => any;
@@ -3493,9 +3649,9 @@ declare const YouthServers: {
         };
         Blazer: {
             Send: (departments: string[], date: string, message: string, token?: string) => {
-                onComplete: (func: <A_157 = {
+                onComplete: (func: <A_167 = {
                     msg: string;
-                }>(data: A_157) => any) => any;
+                }>(data: A_167) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3523,10 +3679,10 @@ declare const YouthServers: {
         };
         Citizens: {
             CreateLink: (token?: string) => {
-                onComplete: (func: <A_158 = {
+                onComplete: (func: <A_168 = {
                     id: string;
                     link: string;
-                }>(data: A_158) => any) => any;
+                }>(data: A_168) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3537,9 +3693,9 @@ declare const YouthServers: {
                 abort: () => void;
             };
             DeleteLink: (token?: string) => {
-                onComplete: (func: <A_159 = {
+                onComplete: (func: <A_169 = {
                     msg: string;
-                }>(data: A_159) => any) => any;
+                }>(data: A_169) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3581,7 +3737,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetUserDepartments: (Authorization?: string) => {
-                onComplete: (func: <A_160 = import("./@types/citizen").Citizen[]>(data: A_160) => any) => any;
+                onComplete: (func: <A_170 = import("./@types/citizen").Citizen[]>(data: A_170) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/citizen").Citizen[]) => any) => any;
@@ -3589,7 +3745,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetDepartmentCitizens: (type: "" | "all" | "lobby", token?: string) => {
-                onComplete: (func: <A_160 = import("./@types/citizen").Citizen[]>(data: A_160) => any) => any;
+                onComplete: (func: <A_170 = import("./@types/citizen").Citizen[]>(data: A_170) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/citizen").Citizen[]) => any) => any;
@@ -3605,9 +3761,9 @@ declare const YouthServers: {
                 abort: () => void;
             };
             Share: (id: string, body: string[], token?: string) => {
-                onComplete: (func: <A_161 = {
+                onComplete: (func: <A_171 = {
                     msg: string;
-                }>(data: A_161) => any) => any;
+                }>(data: A_171) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3623,9 +3779,9 @@ declare const YouthServers: {
                 receiver: string;
                 content: string;
             }, token?: string) => {
-                onComplete: (func: <A_162 = {
+                onComplete: (func: <A_172 = {
                     id: string;
-                }>(data: A_162) => any) => any;
+                }>(data: A_172) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3635,9 +3791,9 @@ declare const YouthServers: {
                 abort: () => void;
             };
             Remove: (id: string, token?: string) => {
-                onComplete: (func: <A_163 = {
+                onComplete: (func: <A_173 = {
                     msg: string;
-                }>(data: A_163) => any) => any;
+                }>(data: A_173) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3647,7 +3803,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             Mails: (box: "inbox" | "outbox", token?: string) => {
-                onComplete: (func: <A_164 = import("./@types/common").Pagination<import("./@types/letter").Letter>>(data: A_164) => any) => any;
+                onComplete: (func: <A_174 = import("./@types/common").Pagination<import("./@types/letter").Letter>>(data: A_174) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/common").Pagination<import("./@types/letter").Letter>) => any) => any;
@@ -3655,7 +3811,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             Mail: (id: string, box: "inbox" | "outbox", token?: string) => {
-                onComplete: (func: <A_165 = import("./@types/letter").Letter>(data: A_165) => any) => any;
+                onComplete: (func: <A_175 = import("./@types/letter").Letter>(data: A_175) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/letter").Letter) => any) => any;
@@ -3670,9 +3826,9 @@ declare const YouthServers: {
                 department: string;
                 because?: string | undefined;
             }, Authorization?: string) => {
-                onComplete: (func: <A_166 = {
+                onComplete: (func: <A_176 = {
                     id: string;
-                }>(data: A_166) => any) => any;
+                }>(data: A_176) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3682,9 +3838,9 @@ declare const YouthServers: {
                 abort: () => void;
             };
             Remove: (id: string, token?: string) => {
-                onComplete: (func: <A_167 = {
+                onComplete: (func: <A_177 = {
                     msg: string;
-                }>(data: A_167) => any) => any;
+                }>(data: A_177) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3694,7 +3850,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetDepartmentComplaint: (id: string, token?: string) => {
-                onComplete: (func: <A_168 = import("./@types/complaint").Complaint>(data: A_168) => any) => any;
+                onComplete: (func: <A_178 = import("./@types/complaint").Complaint>(data: A_178) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/complaint").Complaint) => any) => any;
@@ -3702,7 +3858,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetUserComplaint: (id: string, Authorization?: string) => {
-                onComplete: (func: <A_168 = import("./@types/complaint").Complaint>(data: A_168) => any) => any;
+                onComplete: (func: <A_178 = import("./@types/complaint").Complaint>(data: A_178) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/complaint").Complaint) => any) => any;
@@ -3710,7 +3866,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetDepartmentComplaints: (keyword?: string, token?: string) => {
-                onComplete: (func: <A_168 = import("./@types/complaint").Complaint>(data: A_168) => any) => any;
+                onComplete: (func: <A_178 = import("./@types/complaint").Complaint>(data: A_178) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/complaint").Complaint) => any) => any;
@@ -3718,7 +3874,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetUserComplaints: (keyword?: string, Authorization?: string) => {
-                onComplete: (func: <A_168 = import("./@types/complaint").Complaint>(data: A_168) => any) => any;
+                onComplete: (func: <A_178 = import("./@types/complaint").Complaint>(data: A_178) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/complaint").Complaint) => any) => any;
@@ -3734,9 +3890,9 @@ declare const YouthServers: {
                 members: string[];
                 questions: [];
             }, token?: string) => {
-                onComplete: (func: <A_169 = {
+                onComplete: (func: <A_179 = {
                     id: string;
-                }>(data: A_169) => any) => any;
+                }>(data: A_179) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3752,9 +3908,9 @@ declare const YouthServers: {
                 members: string[];
                 questions: [];
             }, token?: string) => {
-                onComplete: (func: <A_170 = {
+                onComplete: (func: <A_180 = {
                     msg: string;
-                }>(data: A_170) => any) => any;
+                }>(data: A_180) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3764,9 +3920,9 @@ declare const YouthServers: {
                 abort: () => void;
             };
             RemoveProject: (id: string, token?: string) => {
-                onComplete: (func: <A_171 = {
+                onComplete: (func: <A_181 = {
                     msg: string;
-                }>(data: A_171) => any) => any;
+                }>(data: A_181) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3776,7 +3932,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetProjects: (token?: string) => {
-                onComplete: (func: <A_172 = import("./@types/report").ReportProject[]>(data: A_172) => any) => any;
+                onComplete: (func: <A_182 = import("./@types/report").ReportProject[]>(data: A_182) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/report").ReportProject[]) => any) => any;
@@ -3784,7 +3940,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetUserProjects: (Authorization?: string) => {
-                onComplete: (func: <A_172 = import("./@types/report").ReportProject[]>(data: A_172) => any) => any;
+                onComplete: (func: <A_182 = import("./@types/report").ReportProject[]>(data: A_182) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/report").ReportProject[]) => any) => any;
@@ -3792,9 +3948,9 @@ declare const YouthServers: {
                 abort: () => void;
             };
             SendUserReport: (projectId: string, id: string, answers?: string[] | undefined, Authorization?: string) => {
-                onComplete: (func: <A_173 = {
+                onComplete: (func: <A_183 = {
                     msg: string;
-                }>(data: A_173) => any) => any;
+                }>(data: A_183) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: {
@@ -3804,7 +3960,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetProjectReports: (id: string, token?: string) => {
-                onComplete: (func: <A_174 = import("./@types/report").Report[]>(data: A_174) => any) => any;
+                onComplete: (func: <A_184 = import("./@types/report").Report[]>(data: A_184) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/report").Report[]) => any) => any;
@@ -3812,7 +3968,7 @@ declare const YouthServers: {
                 abort: () => void;
             };
             GetUserProjectReports: (id: string, Authorization?: string) => {
-                onComplete: (func: <A_174 = import("./@types/report").Report[]>(data: A_174) => any) => any;
+                onComplete: (func: <A_184 = import("./@types/report").Report[]>(data: A_184) => any) => any;
                 onError: (func: (err: any) => any) => any;
                 onChange: (func: (state: boolean) => any) => any;
                 Convert: (func: (data: import("./@types/report").Report[]) => any) => any;
