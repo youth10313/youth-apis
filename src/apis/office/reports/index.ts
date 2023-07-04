@@ -14,4 +14,4 @@ const GetProjectReports = (id: string, token = '') => YouthRoute<Report[]>('get'
 
 const Reports = { CreateProject, UpdateProject, RemoveProject, GetProjects, GetUserProjects, SendUserReport, GetProjectReports, GetUserProjectReports, Send };
 
-export default Reports
+export default Reports;
