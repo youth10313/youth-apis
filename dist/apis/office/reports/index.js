@@ -14,6 +14,10 @@ var RemoveProject = function (id, token) {
     if (token === void 0) { token = ''; }
     return (0, request_1.YouthRoute)('delete', "".concat(api_1.OFFICIAL_API, "reports/").concat(id), {}, { token: token }, {});
 };
+var Send = function (projectId, token) {
+    if (token === void 0) { token = ''; }
+    return (0, request_1.YouthRoute)('post', "".concat(api_1.OFFICIAL_API, "reports/send/").concat(projectId), {}, { token: token }, {});
+};
 var GetProjects = function (token) {
     if (token === void 0) { token = ''; }
     return (0, request_1.YouthRoute)('get', "".concat(api_1.OFFICIAL_API, "reports"), {}, { token: token }, {});
@@ -34,5 +38,5 @@ var GetProjectReports = function (id, token) {
     if (token === void 0) { token = ''; }
     return (0, request_1.YouthRoute)('get', "".concat(api_1.OFFICIAL_API, "reports/").concat(id), {}, { token: token }, {});
 };
-var Reports = { CreateProject: CreateProject, UpdateProject: UpdateProject, RemoveProject: RemoveProject, GetProjects: GetProjects, GetUserProjects: GetUserProjects, SendUserReport: SendUserReport, GetProjectReports: GetProjectReports, GetUserProjectReports: GetUserProjectReports };
+var Reports = { CreateProject: CreateProject, UpdateProject: UpdateProject, RemoveProject: RemoveProject, GetProjects: GetProjects, GetUserProjects: GetUserProjects, SendUserReport: SendUserReport, GetProjectReports: GetProjectReports, GetUserProjectReports: GetUserProjectReports, Send: Send };
 exports.default = Reports;

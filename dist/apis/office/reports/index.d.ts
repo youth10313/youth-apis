@@ -92,5 +92,17 @@ declare const Reports: {
         subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
         abort: () => void;
     };
+    Send: (projectId: string, token?: string) => {
+        onComplete: (func: <A_6 = {
+            msg: string;
+        }>(data: A_6) => any) => any;
+        onError: (func: (err: any) => any) => any;
+        onChange: (func: (state: boolean) => any) => any;
+        Convert: (func: (data: {
+            msg: string;
+        }) => any) => any;
+        subscribe: (projects?: string[] | undefined, args?: import("../../../@types/subscribe").Args | undefined) => void;
+        abort: () => void;
+    };
 };
 export default Reports;
